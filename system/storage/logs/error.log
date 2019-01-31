@@ -1,0 +1,20 @@
+2019-01-31 14:54:13 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:54:22 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:54:23 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:54:24 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:54:30 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:54:31 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:54:52 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:55:34 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:55:46 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 14:59:34 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/tea.loc/catalog/view/theme/default/template/common/column_left.tpl! in D:\OpenServer\domains\tea.loc\system\library\template\php.php on line 23
+2019-01-31 16:54:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\storage\modification\system\engine\loader.php on line 53
+2019-01-31 17:06:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:13:37 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:13:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:14:01 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:14:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:15:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:16:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
+2019-01-31 17:17:57 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\tea.loc\catalog\model\extension\module\phe.php:5) in D:\OpenServer\domains\tea.loc\system\library\response.php on line 12
