@@ -173,6 +173,20 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-footer">Главное меню в подвале сайта</label>
+                <div class="col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <?php if ($footer_category) { ?>
+                      <input type="checkbox" name="footer_category" value="1" checked="checked" id="input-footer" />
+                      <?php } else { ?>
+                      <input type="checkbox" name="footer_category" value="1" id="input-footer" />
+                      <?php } ?>
+                      &nbsp; </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-column"><span data-toggle="tooltip" title="<?php echo $help_column; ?>"><?php echo $entry_column; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="column" value="<?php echo $column; ?>" placeholder="<?php echo $entry_column; ?>" id="input-column" class="form-control" />

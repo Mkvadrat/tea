@@ -1,65 +1,107 @@
     <footer>
-      <div class="footer-info">
-        <div class="container">
-          <div class="footer-content">
-            <div class="footer-nav">
-              <nav>
-                <a href="#">Каталог</a>
-                <a href="#">Прайс-лист</a>
-                <a href="#">Заказ и оплата</a>
-                <a href="#">Наши магазины </a>
-                <a href="#">Документы </a>
-                <a href="#">Франчайзинг</a>
-                <a href="#">Блог</a>
-                <a href="#">Контакты</a>
-              </nav>
-            </div>
-            <div class="footer-product">
-              <nav>
-                <a href="#">Фиточай</a>
-                <a href="#">Стевия,травы</a>
-                <a href="#">Медовая продукция</a>
-                <a href="#">Крымское варенье</a>
-                <a href="#">Восточные сладости</a>
-                <a href="#">Пряности</a>
-                <a href="#">Эфирные и косметические масла</a>
-                <a href="#">Сувениры</a>
-                <a href="#">Живое Крымское мыло</a>
-                <a href="#">Крымские бальзамы</a>
-                <a href="#">Косметические масла</a>
-                <a href="#">Фигурное мыло</a>
-              </nav>
-            </div>
-            <div class="footer-company">
-              <div class="address-wrapper">
-                <div class="address">
-                  <p>Крым,  Ялта,  г. Алупка,<br>
-    ул. Крутой спуск  д. 12 а</p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-content">
+              <div class="footer-nav">
+                <?php if($custommenu){ ?>
+                <nav>
+                  <?php foreach($custommenu as $menu){ ?>
+                    <a href="<?php echo $menu['href']; ?>"><?php echo $menu['name']; ?></a>
+                  <?php } ?>
+                </nav>
+                <?php } ?>
+              </div>
+              <div class="footer-product">
+                <?php if($categories){ ?>
+                <nav>
+                  <?php foreach($categories as $category){ ?>
+                    <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+                  <?php } ?>
+                </nav>
+                <?php } ?>
+              </div>
+              <div class="footer-company">
+                <div class="address-wrapper">
+                  <div class="address">
+                    <p><?php echo $address; ?></p>
+                  </div>
+                  <div class="email-footer">
+                    <a href="mailto:<?php echo $email; ?>">E-mail: <?php echo $email; ?></a>
+                  </div>
                 </div>
-                <div class="email-footer">
-                  <a href="mailto:tea-crimea@yandex.ru">E-mail: tea-crimea@yandex.ru</a>
+                <div class="footer-data">
+                  <p><?php echo $open; ?></p>
+                </div>
+                <div class="phone-footer">
+                  <?php echo $footer_telephone; ?>
                 </div>
               </div>
-              <div class="footer-data">
-                <p>Время работы:<br>
-    Пн-Пт с 9:00 до 18:00</p>
-              </div>
-              <div class="phone-footer">
-                <a href="tel:+79788649637" class="phone-big">+7(978)8649637</a>
-                <a href="#">Обратный звонок</a>
-                <a href="#">Отследить заказ</a>
+              <div class="copy">
+                <?php echo $wrapper; ?>
               </div>
             </div>
-            <div class="copy">
-              <h2>2008 - 2019 © Все права защищены «Чаи Крыма» ™</h2>
-              <p>Сайт разработан в <span> <a href="http://mkvadrat.com" target="_blank"><img src="img/logo-com.png" alt="logo" width="32" height="32"></a>  </span></p>
+          </div>
+          <div class="col-md-6">
+            <div class="map">
+              <div id="map"></div>
+              
+              <?php if($geocode){ ?>
+              <script>
+                //start maps
+                ymaps.ready(init);
+                    function init () {
+                    var myMap = new ymaps.Map("map", {
+                      center: [<?php echo $geocode; ?>],
+                      zoom: 18,
+                    <!--Скрыть элементы управления: controls: []	 -->
+                      controls: []
+                    }, {
+                      searchControlProvider: 'yandex#search'
+                    });
+                
+                      if (window.matchMedia("(max-width: 1500px)").matches) {
+                      myMap.setCenter([<?php echo $geocode; ?>])
+                      };
+                      if (window.matchMedia("(max-width: 992px)").matches) {
+                      myMap.setCenter([<?php echo $geocode; ?>])
+                      };
+                      if (window.matchMedia("(max-width: 767px)").matches) {
+                      myMap.setCenter([<?php echo $geocode; ?>])
+                      };
+                
+                  myGeoObject = new ymaps.GeoObject({
+                      properties: {
+                        iconContent: 'Lorem',
+                        hintContent: 'Компания "Lorem"'
+                      }
+                      }, {
+                       
+                      preset: 'islands#blackStretchyIcon',
+                
+                      draggable: false,
+                    });
+                  myMap.behaviors
+                    .disable('scrollZoom')
+                    
+                    myMap.geoObjects
+                    .add(myGeoObject)
+                    .add(new ymaps.Placemark([<?php echo $geocode; ?>], {
+                      iconCaption: '<?php echo $geoname ? $geoname : ''?>'
+                    }, {
+                      preset: 'islands#greenDotIconWithCaption'
+                    }))
+                  }
+                 //end maps
+                 
+
+              </script>
+              <?php } ?>
             </div>
           </div>
         </div>
       </div>
-      <div class="map">
-          <div id="map"></div>
-      </div>
     </footer>
+
   </body>
 </html>

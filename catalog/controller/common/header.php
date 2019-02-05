@@ -60,6 +60,7 @@ class ControllerCommonHeader extends Controller {
 
 		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');
 		$data['text_logged'] = sprintf($this->language->get('text_logged'), $this->url->link('account/account', '', true), $this->customer->getFirstName(), $this->url->link('account/logout', '', true));
+		$data['text_customer'] = $this->customer->getFirstName();
 
 		$data['text_account'] = $this->language->get('text_account');
 		$data['text_register'] = $this->language->get('text_register');
@@ -86,7 +87,11 @@ class ControllerCommonHeader extends Controller {
 		$data['shopping_cart'] = $this->url->link('checkout/cart');
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 		$data['contact'] = $this->url->link('information/contact');
-		$data['telephone'] = $this->config->get('config_telephone');
+		
+		$data['address'] = html_entity_decode(nl2br($this->config->get('config_address')), ENT_QUOTES, 'UTF-8');
+		$data['open'] = html_entity_decode(nl2br($this->config->get('config_open')), ENT_QUOTES, 'UTF-8');
+		$data['cooperation'] = html_entity_decode(nl2br($this->config->get('config_cooperation')), ENT_QUOTES, 'UTF-8');
+		$data['telephone'] = html_entity_decode(nl2br($this->config->get('config_telephone')), ENT_QUOTES, 'UTF-8');
 
 		// Menu
 		$this->load->model('catalog/category');
@@ -125,6 +130,44 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+		
+		$this->load->model('design/custommenu');
+		
+		$custommenus = $this->model_design_custommenu->getcustommenus();
+        $custommenu_child = $this->model_design_custommenu->getChildcustommenus();
+
+        foreach($custommenus as $id => $custommenu) {
+			$children_data = array();
+        
+			foreach($custommenu_child as $child_id => $child_custommenu) {
+                if (($custommenu['custommenu_id'] != $child_custommenu['custommenu_id']) or !is_numeric($child_id)) {
+                    continue;
+                }
+
+                $child_name = '';
+
+                if (($custommenu['custommenu_type'] == 'category') and ($child_custommenu['custommenu_type'] == 'category')){
+                    $filter_data = array(
+                        'filter_category_id'  => $child_custommenu['link'],
+                        'filter_sub_category' => true
+                    );
+
+                    $child_name = ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : '');
+                }
+
+                $children_data[] = array(
+                    'name' => $child_custommenu['name'] . $child_name,
+                    'href' => $this->getcustommenuLink($custommenu, $child_custommenu)
+                );
+            }
+
+			$data['custommenu'][] = array(
+				'name'     => $custommenu['name'] ,
+				'children' => $children_data,
+				'column'   => $custommenu['columns'] ? $custommenu['columns'] : 1,
+				'href'     => $this->getcustommenuLink($custommenu)
+			);
+        }
 
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
@@ -151,5 +194,56 @@ class ControllerCommonHeader extends Controller {
 		}
 
 		return $this->load->view('common/header', $data);
+	}
+	
+	public function getcustommenuLink($parent, $child = null) {
+        $item = empty($child) ? $parent : $child;
+
+        switch ($item['custommenu_type']) {
+            case 'category':
+                $route = 'product/category';
+
+                if (!empty($child)) {
+                    $args = 'path=' . $parent['link'] . '_' . $item['link'];
+                } else {
+                    $args = 'path='.$item['link'];
+                }
+                break;
+            case 'product':
+                $route = 'product/product';
+                $args = 'product_id='.$item['link'];
+                break;
+            case 'manufacturer':
+                $route = 'product/manufacturer/info';
+                $args = 'manufacturer_id='.$item['link'];
+                break;
+            case 'information':
+                $route = 'information/information';
+                $args = 'information_id='.$item['link'];
+                break;
+            default:
+                $tmp = explode('&', str_replace('index.php?route=', '', $item['link']));
+
+                if (!empty($tmp)) {
+                    $route = $tmp[0];
+                    unset($tmp[0]);
+                    $args = (!empty($tmp)) ? implode('&', $tmp) : '';
+                }
+                else {
+                    $route = $item['link'];
+                    $args = '';
+                }
+
+                break;
+        }
+
+        $check = stripos($item['link'], 'http');
+        $checkbase = strpos($item['link'], '/');
+        if ( $check === 0 || $checkbase === 0 ) {
+			$link = $item['link'];
+        } else {
+            $link = $this->url->link($route, $args);
+        }
+        return $link;
 	}
 }

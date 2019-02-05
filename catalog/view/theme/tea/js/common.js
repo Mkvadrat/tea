@@ -127,12 +127,77 @@ $(document).ready(function() {
 	});
 
 	// tooltips on hover
-	/*$('[data-toggle=\'tooltip\']').tooltip({container: 'body',trigger: 'hover'});
+	$('[data-toggle=\'tooltip\']').tooltip({container: 'body',trigger: 'hover'});
 
 	// Makes tooltips work on ajax generated content
 	$(document).ajaxStop(function() {
 		$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
-	});*/
+	});
+	
+	//js theme functions
+	var items = 6; // - количество отображаемых новостей
+    hideitems = "Скрыть категории";
+    showitems = "Еще ...";
+
+    $(".archive").html( showitems );
+    $(".items:not(:lt("+items+"))").hide();
+
+    $(".archive").click(function (e){
+      e.preventDefault();
+      if( $(".items:eq("+items+")").is(":hidden") )
+      {
+        $(".items:hidden").show();
+        $(".archive").html( hideitems );
+      }
+      else
+      {
+        $(".items:not(:lt("+items+"))").hide();
+        $(".archive").html( showitems );
+      }
+    });
+	
+	// start slider
+	$('.owl-carousel').owlCarousel({
+	loop:true,
+	margin:10,
+	nav:true,
+	responsive:{
+	0:{
+		items:1
+	},
+	600:{
+		items:1
+	},
+	1000:{
+		items:1
+	}
+	}
+	})
+	// end slider
+	
+	 // start Stamp
+	 function Stamp() {
+	   window.print();
+	 }
+	 // end stamp
+	
+	 // start tab
+	 function openTabs(evt, cityName) {
+	   var i, tabcontent, tablinks;
+	   tabcontent = document.getElementsByClassName("tabcontent");
+	   for (i = 0; i < tabcontent.length; i++) {
+		 tabcontent[i].style.display = "none";
+	   }
+	   tablinks = document.getElementsByClassName("tablinks");
+	   for (i = 0; i < tablinks.length; i++) {
+		 tablinks[i].className = tablinks[i].className.replace(" active", "");
+	   }
+	   document.getElementById(cityName).style.display = "block";
+	   evt.currentTarget.className += " active";
+	 }
+	
+	 //document.getElementById("defaultOpen").click();
+	// end Stamp
 });
 
 // Cart add remove functions
@@ -143,12 +208,6 @@ var cart = {
 			type: 'post',
 			data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
 			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
 			success: function(json) {
 				$('.alert, .text-danger').remove();
 
@@ -161,12 +220,11 @@ var cart = {
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
-						$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+						$('#cart a .number p').html(json['count']);
+						$('#cart a .price p').html(json['price']);
 					}, 100);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
-
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {

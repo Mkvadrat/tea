@@ -135,18 +135,42 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-address<?php echo $language['language_id']; ?>"><?php echo $entry_address; ?></label>
+                    <label class="col-sm-2 control-label" for="input-address<?php echo $language['language_id']; ?>">Адрес</label>
                     <div class="col-sm-10">
-                      <textarea name="config_langdata[<?php echo $language['language_id']; ?>][address]" placeholder="<?php echo $entry_address; ?>" rows="5" id="input-address<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($config_langdata[$language['language_id']]) ? $config_langdata[$language['language_id']]['address'] : ''; ?></textarea>
+                      <textarea name="config_langdata[<?php echo $language['language_id']; ?>][address]" placeholder="Адрес" rows="5" id="input-address<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($config_langdata[$language['language_id']]) ? $config_langdata[$language['language_id']]['address'] : ''; ?></textarea>
                       <?php if (isset($error_address[$language['language_id']])) { ?>
                       <div class="text-danger"><?php echo $error_address[$language['language_id']]; ?></div>
                       <?php } ?>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-open<?php echo $language['language_id']; ?>"><span data-toggle="tooltip" data-container="#tab-general" title="<?php echo $help_open; ?>"><?php echo $entry_open; ?></span></label>
+                    <label class="col-sm-2 control-label" for="input-open<?php echo $language['language_id']; ?>">Время работы</label>
                     <div class="col-sm-10">
-                      <textarea name="config_langdata[<?php echo $language['language_id']; ?>][open]" rows="5" placeholder="<?php echo $entry_open; ?>" id="input-open<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($config_langdata[$language['language_id']]) ? $config_langdata[$language['language_id']]['open'] : ''; ?></textarea>
+                      <textarea name="config_langdata[<?php echo $language['language_id']; ?>][open]" rows="5" placeholder="Время работы" id="input-open<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($config_langdata[$language['language_id']]) ? $config_langdata[$language['language_id']]['open'] : ''; ?></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-cooperation<?php echo $language['language_id']; ?>">Сотрудничество (Шапка сайта)</label>
+                    <div class="col-sm-10">
+                      <textarea name="config_langdata[<?php echo $language['language_id']; ?>][cooperation]" rows="5" placeholder="Сотрудничество (Шапка сайта)" id="input-cooperation<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($config_langdata[$language['language_id']]) ? $config_langdata[$language['language_id']]['cooperation'] : ''; ?></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-telephone">Телефон (Шапка сайта)</label>
+                    <div class="col-sm-10">
+                      <textarea name="config_telephone" rows="5" placeholder="Телефон (Шапка сайта)" id="input-telephone" class="form-control"><?php echo $config_telephone; ?></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-footer-telephone">Телефон (Подвал сайта)</label>
+                    <div class="col-sm-10">
+                      <textarea name="config_footer_telephone" rows="5" placeholder="Телефон (Подвал сайта)" id="input-footer-telephone" class="form-control"><?php echo $config_footer_telephone; ?></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-wrapper">Wrapper</label>
+                    <div class="col-sm-10">
+                      <textarea name="config_wrapper" rows="5" placeholder="Wrapper" id="input-wrapper" class="form-control summernote"><?php echo $config_wrapper; ?></textarea>
                     </div>
                   </div>
                   <div class="form-group">
@@ -164,21 +188,18 @@
                   <input type="text" name="config_geocode" value="<?php echo $config_geocode; ?>" placeholder="<?php echo $entry_geocode; ?>" id="input-geocode" class="form-control" />
                 </div>
               </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-geoname">Адрес метки на карте</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_geoname" value="<?php echo $config_geoname; ?>" placeholder="Адрес метки на карте" id="input-geoname" class="form-control" />
+                </div>
+              </div>
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
                 <div class="col-sm-10">
                   <input type="text" name="config_email" value="<?php echo $config_email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
                   <?php if ($error_email) { ?>
                   <div class="text-danger"><?php echo $error_email; ?></div>
-                  <?php } ?>
-                </div>
-              </div>
-              <div class="form-group required">
-                <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
-                <div class="col-sm-10">
-                  <input type="text" name="config_telephone" value="<?php echo $config_telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
-                  <?php if ($error_telephone) { ?>
-                  <div class="text-danger"><?php echo $error_telephone; ?></div>
                   <?php } ?>
                 </div>
               </div>

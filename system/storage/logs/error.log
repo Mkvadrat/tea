@@ -18,3 +18,28 @@
 2019-01-31 17:15:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
 2019-01-31 17:16:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 53
 2019-01-31 17:17:57 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\tea.loc\catalog\model\extension\module\phe.php:5) in D:\OpenServer\domains\tea.loc\system\library\response.php on line 12
+2019-02-05 12:36:19 - PHP Notice:  Undefined index: cooperation in D:\OpenServer\domains\tea.loc\admin\view\template\setting\setting.tpl on line 149
+2019-02-05 12:53:45 - PHP Notice:  Undefined index: footer_category in D:\OpenServer\domains\tea.loc\admin\controller\catalog\category.php on line 518
+2019-02-05 12:54:12 - PHP Notice:  Undefined index: footer_category in D:\OpenServer\domains\tea.loc\admin\controller\catalog\category.php on line 518
+2019-02-05 12:54:30 - PHP Notice:  Undefined index: footer_category in D:\OpenServer\domains\tea.loc\admin\controller\catalog\category.php on line 518
+2019-02-05 12:54:43 - PHP Notice:  Undefined index: footer_category in D:\OpenServer\domains\tea.loc\admin\controller\catalog\category.php on line 518
+2019-02-05 14:36:34 - PHP Notice:  Undefined variable: config_wrapper in D:\OpenServer\domains\tea.loc\admin\view\template\setting\setting.tpl on line 173
+2019-02-05 14:37:37 - PHP Notice:  Undefined variable: config_wrapper in D:\OpenServer\domains\tea.loc\admin\view\template\setting\setting.tpl on line 173
+2019-02-05 16:04:45 - PHP Notice:  Undefined variable: geoname in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\footer.tpl on line 90
+2019-02-05 16:05:19 - PHP Notice:  Undefined variable: geoname in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\footer.tpl on line 90
+2019-02-05 16:41:23 - PHP Notice:  Array to string conversion in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:41:45 - PHP Notice:  Array to string conversion in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:41:48 - PHP Notice:  Array to string conversion in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:42:11 - PHP Notice:  Array to string conversion in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:42:14 - PHP Notice:  Array to string conversion in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:42:28 - PHP Notice:  Array to string conversion in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:43:38 - PHP Notice:  Undefined variable: count in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:43:38 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67
+2019-02-05 16:43:40 - PHP Notice:  Undefined variable: count in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:43:40 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67
+2019-02-05 16:44:13 - PHP Notice:  Undefined variable: count in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:44:13 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67
+2019-02-05 16:44:28 - PHP Notice:  Undefined variable: count in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:44:28 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67
+2019-02-05 16:44:40 - PHP Notice:  Undefined variable: count in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
+2019-02-05 16:44:40 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67

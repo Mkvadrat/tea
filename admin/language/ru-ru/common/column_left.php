@@ -102,3 +102,5 @@ $_['text_complete_status']                  = 'Выполненных заказ
 $_['text_processing_status']                = 'Заказов в обработке';
 $_['text_other_status']          	        = 'Другие статусы';
 $_['text_octeam_toolset']              		= 'OC Team';
+$_['text_custommenu']                       = 'Меню в шапке сайта';
+$_['text_custommenu_footer']                = 'Меню в подвале сайта';

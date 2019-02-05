@@ -27,16 +27,14 @@
 <?php } ?>
 <meta property="og:site_name" content="<?php echo $name; ?>" />
 
-<link rel="stylesheet" href="catalog/view/theme/tea/style/css.css">
-<link rel="stylesheet" href="catalog/view/theme/tea/style/fonts.css">
-<link rel="stylesheet" href="catalog/view/theme/tea/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-
-<script src="catalog/view/theme/tea/libs/jquery/jquery.min.js"></script>
-<script src="catalog/view/theme/tea/libs/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+<!--JS AND STYLES-->
+<link rel="stylesheet" href="catalog/view/theme/tea/style/style.css">
+<link rel="stylesheet" href="catalog/view/theme/tea/js/libs/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="catalog/view/theme/tea/js/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+<script src="catalog/view/theme/tea/js/libs/jquery/jquery.min.js"></script>
+<script src="catalog/view/theme/tea/js/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="catalog/view/theme/tea/js/libs/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script src="catalog/view/theme/tea/js/slider.js"></script>
-<script src="catalog/view/theme/tea/js/map.js"></script>
-
 
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
@@ -52,78 +50,100 @@
 <?php echo $analytic; ?>
 <?php } ?>
 </head>
- <body>
-    <header>
-        <div class="top-nav">
-          <div class="container">
-            <div class="top-wrapper">
-              <nav>
-                <a href="#">Каталог</a>
-                <a href="#">Прайс-лист</a>
-                <a href="#">Заказ и оплата</a>
-                <a href="#">Наши магазины</a>
-                <a href="#">Документы</a>
-                <a href="#">Франчайзинг</a>
-                <a href="#">Контакты</a>
-              </nav>
-              <div class="entry">
-                <a href="#">Вход/</a>
-                <a href="#">Регистрация</a>
-              </div>
-            </div>
+<body>
+  <header>
+    <div class="top-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 top-nav">
+            <?php if($custommenu){ ?>
+            <ul>
+              <?php foreach($custommenu as $menu){ ?>
+                <li><a href="<?php echo $menu['href']; ?>"><?php echo $menu['name']; ?></a></li>
+              <?php } ?>
+            </ul>
+            <?php } ?>
+          </div>
+          <div class="col-md-2 entry">
+            <?php if ($logged) { ?>
+              <ul class="list-inline">
+                <li class="dropdown">
+                  <a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span><span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+                    <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
+                    <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+                  </ul>
+                </li>
+              </ul>
+            <?php } else { ?>
+              <a href="<?php echo $login; ?>"><?php echo $text_login; ?></a><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
+            <?php } ?>
           </div>
         </div>
-        <div class="header-info">
-          <div class="container">
-            <div class="header-info-wrapper">
-              <div class="logo">
-                <a href="#"><img src="img/logo-big.png" alt="logo" width="189" height="81"></a>
+      </div>
+    </div>
+    <div class="header-info">
+      <div class="container">
+        <div class="row header-desk">
+          <div class="col-md-2 logo">
+            <?php if ($logo) { ?>
+              <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" width="180" height="80" /></a>
+            <?php } else { ?>
+              <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+            <?php } ?>
+          </div>
+          <div class="col-md-3 cooperation">
+            <p><?php echo $address; ?></p>
+            <?php echo $cooperation; ?>
+          </div>
+          <div class="col-md-5 data-info">
+            <div class="row">
+              <div class="col-md-6 data">
+                <p><?php echo $open; ?></p>
               </div>
-              <div class="Cooperation">
-                <p>Крым,  Ялта,  г. Алупка,<br>
-                  ул. Крутой спуск  д. 12 а
-                </p>
-                <a href="#">Сотрудничество и опт</a>
-              </div>
-              <div class="data">
-                <p>Время работы:<br>
-                  Пн-Пт с 9:00 до 18:00
-                </p>
-              </div>
-              <div class="phone">
+              <div class="col-md-6 phone">
                 <div class="phone-icon">
-                  <img src="img/phone.png" alt="phone" width="34" height="34">
+                  <img src="catalog/view/theme/tea/image/phone.png" alt="phone" width="24" height="24">
                 </div>
-                <a href="tel:+79788649637">+7(978)8649637</a>
-                <a href="tel:+79781417930">+7(978)1417930</a>
-              </div>
-              <div class="basket">
-                <button type="button" name="basket">
-                  <img src="img/basket-icon.png" alt="basket-icon" width="32" height="29">
-                  <div class="number">
-                    <p>10</p>
-                  </div>
-                  <div class="price">
-                    <p>-1 34000p.</p>
-                  </div>
-                </button>
+                <?php echo $telephone; ?>
               </div>
             </div>
           </div>
+          <?php echo $cart; ?>
         </div>
-        <div class="bottom-nav">
-          <div class="container">
-            <nav>
-              <a href="#">Фиточаи</a>
-              <a href="#">Стевия,травы  </a>
-              <a href="#">Медовая продукция</a>
-              <a href="#">Крымское варенье </a>
-              <a href="#">Восточные сладости</a>
-              <a href="#">Пряности</a>
-              <a href="#">Эфирные и косметические масла</a>
-              <a href="#">Сувениры Живое </a>
-              <a href="#">Еще<span><img src="img/link.png" alt="link-icon" width="19" height="4"></span></a>
-            </nav>
-          </div>
+      </div>
+    </div>
+  </header>
+  <div class="bottom-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 nav-bottom">
+          <?php if($categories){ ?>
+          <ul id="nav">
+            <?php foreach ($categories as $category) { ?>
+            <?php if ($category['children']) { ?>
+            <li class="items">
+              <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+                <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+                <ul>
+                  <?php foreach ($children as $child) { ?>
+                  <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
+                  <?php } ?>
+                </ul>
+                <?php } ?>
+            </li>
+            <?php } else { ?>
+            <li class="items"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+            <?php } ?>
+            <?php } ?>
+            
+            <?php if(count($categories) > 6){ ?>
+            <li><a href="#" class="archive"></a></li>
+            <?php } ?>
+          </ul>
+          <?php } ?>
         </div>
-    </header>
+      </div>
+    </div>
+  </div>

@@ -322,12 +322,6 @@ class ControllerSettingSetting extends Controller {
 			$data['error_email'] = '';
 		}
 
-		if (isset($this->error['telephone'])) {
-			$data['error_telephone'] = $this->error['telephone'];
-		} else {
-			$data['error_telephone'] = '';
-		}
-
 		if (isset($this->error['meta_title'])) {
 			$data['error_meta_title'] = $this->error['meta_title'];
 		} else {
@@ -512,6 +506,17 @@ class ControllerSettingSetting extends Controller {
 				'value' => $code
 			);
 		}
+		
+		//CKEditor
+		if ($this->config->get('config_editor_default')) {
+			$this->document->addScript('view/javascript/ckeditor/ckeditor.js');
+			$this->document->addScript('view/javascript/ckeditor/ckeditor_init.js');
+		} else {
+			$this->document->addScript('view/javascript/summernote/summernote.js');
+			$this->document->addScript('view/javascript/summernote/lang/summernote-' . $this->language->get('lang') . '.js');
+			$this->document->addScript('view/javascript/summernote/opencart.js');
+			$this->document->addStyle('view/javascript/summernote/summernote.css');
+		}
 			
 		if (isset($this->request->post['config_layout_id'])) {
 			$data['config_layout_id'] = $this->request->post['config_layout_id'];
@@ -540,11 +545,23 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_address'] = $this->config->get('config_address');
 		}
-
+		
+		if (isset($this->request->post['config_cooperation'])) {
+			$data['config_cooperation'] = $this->request->post['config_cooperation'];
+		} else {
+			$data['config_cooperation'] = $this->config->get('config_cooperation');
+		}
+		
 		if (isset($this->request->post['config_geocode'])) {
 			$data['config_geocode'] = $this->request->post['config_geocode'];
 		} else {
 			$data['config_geocode'] = $this->config->get('config_geocode');
+		}
+		
+		if (isset($this->request->post['config_geoname'])) {
+			$data['config_geoname'] = $this->request->post['config_geoname'];
+		} else {
+			$data['config_geoname'] = $this->config->get('config_geoname');
 		}
 
 		if (isset($this->request->post['config_email'])) {
@@ -557,6 +574,18 @@ class ControllerSettingSetting extends Controller {
 			$data['config_telephone'] = $this->request->post['config_telephone'];
 		} else {
 			$data['config_telephone'] = $this->config->get('config_telephone');
+		}
+		
+		if (isset($this->request->post['config_footer_telephone'])) {
+			$data['config_footer_telephone'] = $this->request->post['config_footer_telephone'];
+		} else {
+			$data['config_footer_telephone'] = $this->config->get('config_footer_telephone');
+		}
+		
+		if (isset($this->request->post['config_wrapper'])) {
+			$data['config_wrapper'] = $this->request->post['config_wrapper'];
+		} else {
+			$data['config_wrapper'] = $this->config->get('config_wrapper');
 		}
 
 		if (isset($this->request->post['config_fax'])) {
@@ -1388,10 +1417,6 @@ class ControllerSettingSetting extends Controller {
 
 		if ((utf8_strlen($this->request->post['config_email']) > 96) || !filter_var($this->request->post['config_email'], FILTER_VALIDATE_EMAIL)) {
 			$this->error['email'] = $this->language->get('error_email');
-		}
-
-		if ((utf8_strlen($this->request->post['config_telephone']) < 3) || (utf8_strlen($this->request->post['config_telephone']) > 32)) {
-			$this->error['telephone'] = $this->language->get('error_telephone');
 		}
 
 		if (!empty($this->request->post['config_customer_group_display']) && !in_array($this->request->post['config_customer_group_id'], $this->request->post['config_customer_group_display'])) {

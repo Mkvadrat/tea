@@ -511,6 +511,14 @@ class ControllerCatalogCategory extends Controller {
 		} else {
 			$data['top'] = 0;
 		}
+		
+		if (isset($this->request->post['footer_category'])) {
+			$data['footer_category'] = $this->request->post['footer_category'];
+		} elseif (!empty($category_info)) {
+			$data['footer_category'] = $category_info['footer_category'];
+		} else {
+			$data['footer_category'] = 0;
+		}
 
 		if (isset($this->request->post['column'])) {
 			$data['column'] = $this->request->post['column'];
