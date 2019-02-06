@@ -155,26 +155,7 @@ $(document).ready(function() {
         $(".archive").html( showitems );
       }
     });
-	
-	// start slider
-	$('.owl-carousel').owlCarousel({
-	loop:true,
-	margin:10,
-	nav:true,
-	responsive:{
-	0:{
-		items:1
-	},
-	600:{
-		items:1
-	},
-	1000:{
-		items:1
-	}
-	}
-	})
-	// end slider
-	
+		
 	 // start Stamp
 	 function Stamp() {
 	   window.print();
@@ -199,6 +180,30 @@ $(document).ready(function() {
 	 //document.getElementById("defaultOpen").click();
 	// end Stamp
 });
+
+//callback form
+function sendForm() {
+    $.ajax({
+        url: 'index.php?route=extension/module/callback/sendForm',
+        type: 'post',
+        data: {
+            'name': $('#name').val(),
+            'tel': $('#phone').val(),
+            'message': $('#message').val(),
+        },
+        dataType: 'json',
+        success: function (data) {
+            swal({
+                title: data.message,
+                text: "",
+                timer: 1000,
+                showConfirmButton: false
+            });
+
+            $.fancybox.close();
+        }
+    });
+}
 
 // Cart add remove functions
 var cart = {

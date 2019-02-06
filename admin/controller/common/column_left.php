@@ -416,7 +416,7 @@ class ControllerCommonColumnLeft extends Controller {
 			if ($marketing) {
 				$data['menus'][] = array(
 					'id'       => 'menu-marketing',
-					'icon'	   => 'fa-share-alt', 
+					'icon'	   => 'fa fa-share-alt-square', 
 					'name'	   => $this->language->get('text_marketing'),
 					'href'     => '',
 					'children' => $marketing

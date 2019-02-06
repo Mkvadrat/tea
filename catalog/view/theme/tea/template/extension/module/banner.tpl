@@ -1,21 +1,33 @@
-<div id="banner<?php echo $module; ?>" class="owl-carousel">
-  <?php foreach ($banners as $banner) { ?>
-  <div class="item">
-    <?php if ($banner['link']) { ?>
-    <a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" /></a>
-    <?php } else { ?>
-    <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" />
+<section class="slider-top">
+  <div id="banner<?php echo $module; ?>" class="owl-carousel owl-theme">
+    <?php foreach ($banners as $banner) { ?>
+      <div class="item">
+        <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>">
+        <div class="slider-info">
+          <h1><?php echo $banner['name']; ?></h1>
+          <a href="<?php echo $banner['link']; ?>">Подробнее</a>
+        </div>
+      </div>
     <?php } ?>
   </div>
-  <?php } ?>
-</div>
+</section>
 <script type="text/javascript"><!--
 $('#banner<?php echo $module; ?>').owlCarousel({
-	items: 6,
-	autoPlay: 3000,
-	singleItem: true,
-	navigation: false,
-	pagination: false,
-	transitionStyle: 'fade'
+  loop:true,
+  margin:10,
+  nav:true,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:1
+    },
+    1000:{
+      items:1
+    }
+  }
 });
 --></script>
+
+

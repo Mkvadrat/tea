@@ -6,10 +6,6 @@ class ControllerExtensionModuleBanner extends Controller {
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
 
-		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
-		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.transitions.css');
-		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
-
 		$data['banners'] = array();
 
 		$results = $this->model_design_banner->getBanner($setting['banner_id']);
@@ -18,6 +14,7 @@ class ControllerExtensionModuleBanner extends Controller {
 			if (is_file(DIR_IMAGE . $result['image'])) {
 				$data['banners'][] = array(
 					'title' => $result['title'],
+					'name'  => html_entity_decode(nl2br($result['title']), ENT_QUOTES, 'UTF-8'),
 					'link'  => $result['link'],
 					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
 				);

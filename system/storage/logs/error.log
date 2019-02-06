@@ -43,3 +43,7 @@
 2019-02-05 16:44:28 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67
 2019-02-05 16:44:40 - PHP Notice:  Undefined variable: count in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 64
 2019-02-05 16:44:40 - PHP Notice:  Undefined variable: price in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 67
+2019-02-06 15:52:34 - PHP Notice:  Undefined variable: data in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 4
+2019-02-06 15:52:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 83
+2019-02-06 15:52:34 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 2
+2019-02-06 15:52:34 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 4
