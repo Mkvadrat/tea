@@ -47,3 +47,4 @@
 2019-02-06 15:52:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\system\engine\loader.php on line 83
 2019-02-06 15:52:34 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 2
 2019-02-06 15:52:34 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 4
+2019-02-07 11:00:01 - PHP Notice:  Undefined index: separator in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\category.tpl on line 18

@@ -81,8 +81,20 @@ $(document).ready(function() {
 		}
 	});
 
-	// Product List
+	// Grid List
 	$('#list-view').click(function() {
+		$('.list').removeClass('current-none-active');
+		$('.grid').addClass('current-none-active');
+	});
+	
+	// Product List
+	$('#grid-view').click(function() {
+		$('.grid').removeClass('current-none-active');
+		$('.list').addClass('current-none-active');
+	});
+	
+	
+	/*$('#list-view').click(function() {
 		$('#content .product-grid > .clearfix').remove();
 
 		$('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
@@ -92,7 +104,6 @@ $(document).ready(function() {
 		localStorage.setItem('display', 'list');
 	});
 
-	// Product Grid
 	$('#grid-view').click(function() {
 		// What a shame bootstrap does not take into account dynamically loaded columns
 		var cols = $('#column-right, #column-left').length;
@@ -117,7 +128,7 @@ $(document).ready(function() {
 	} else {
 		$('#grid-view').trigger('click');
 		$('#grid-view').addClass('active');
-	}
+	}*/
 
 	// Checkout
 	$(document).on('keydown', '#collapse-checkout-option input[name=\'email\'], #collapse-checkout-option input[name=\'password\']', function(e) {

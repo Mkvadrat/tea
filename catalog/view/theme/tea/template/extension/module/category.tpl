@@ -1,4 +1,8 @@
-<div class="list-group">
+<div class="sidebar">
+  <div class="sidebar-title">
+    <p><?php echo $heading_title; ?></p>
+  </div>
+  <section class="ac-container">
   <?php foreach ($categories as $category) { ?>
   <?php if ($category['category_id'] == $category_id) { ?>
   <a href="<?php echo $category['href']; ?>" class="list-group-item active"><?php echo $category['name']; ?></a>
@@ -15,4 +19,6 @@
   <a href="<?php echo $category['href']; ?>" class="list-group-item"><?php echo $category['name']; ?></a>
   <?php } ?>
   <?php } ?>
+  </section>
 </div>
+
