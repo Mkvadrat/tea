@@ -32,8 +32,12 @@
 <link rel="stylesheet" href="catalog/view/theme/tea/js/libs/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="catalog/view/theme/tea/js/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
 <link rel="stylesheet" href="catalog/view/theme/tea/style/sweetalert.css">
+<link rel="stylesheet" href="catalog/view/theme/tea/js/libs/fancybox-master/dist/jquery.fancybox.min.css">
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <script src="catalog/view/theme/tea/js/libs/jquery/jquery.min.js"></script>
 <script src="catalog/view/theme/tea/js/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="catalog/view/theme/tea/js/libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
 <script src="catalog/view/theme/tea/js/libs/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="catalog/view/theme/tea/js/sweetalert.min.js" type="text/javascript"></script>

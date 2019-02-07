@@ -215,6 +215,12 @@
                   <input type="hidden" name="config_image" value="<?php echo $config_image; ?>" id="input-image" />
                 </div>
               </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-payment">Системы оплаты на странице товара</label>
+                <div class="col-sm-10">
+                  <textarea name="config_payment" rows="5" placeholder="Системы оплаты на странице товара" id="input-payment" class="form-control summernote"><?php echo $config_payment; ?></textarea>
+                </div>
+              </div>
               <?php if ($locations) { ?>
               <div class="form-group">
                 <label class="col-sm-2 control-label"><span data-toggle="tooltip" data-container="#tab-general" title="<?php echo $help_location; ?>"><?php echo $entry_location; ?></span></label>

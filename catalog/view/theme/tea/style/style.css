@@ -1174,7 +1174,7 @@ button.fancybox-button.fancybox-button--zoom{
   margin: 9px 20px;
 }
 
-.tab button {
+.tab .nav-tabs li{
   background-color: inherit;
   float: left;
   border: none;
@@ -1186,11 +1186,11 @@ button.fancybox-button.fancybox-button--zoom{
   opacity: 0.5;
 }
 
-.tab button:hover {
+.tab .nav-tabs li:hover {
   opacity: 1;
   text-decoration: underline;
 }
-.tab button.active  {
+.tab .nav-tabs li.active  {
   color: #000000;
   opacity: 1;
 }
@@ -1203,6 +1203,21 @@ button.fancybox-button.fancybox-button--zoom{
 .tabcontent p{
   font-size: 18px;
   margin-bottom: 20px;
+}
+.nav-tabs > li > a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.nav-tabs > li.active > a {
+  color: #000 !important;
+  cursor: pointer !important;
+  background-color: #fff !important;
+  border: 0px solid #fff !important;
+  border-bottom-color: rgb(255, 255, 255) !important;
+  border-bottom-color: transparent !important;
+}
+.nav-tabs {
+    border-bottom: 0px solid #FFF !important;
 }
 .other-products h3{
   font-size: 30px;
