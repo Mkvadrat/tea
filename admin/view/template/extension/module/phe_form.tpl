@@ -62,6 +62,11 @@
 					<?php } else { ?>
 					<option value="contact"><?php echo $text_contact; ?></option>
 					<?php } ?>
+          <?php if ($type == 'callback') { ?>
+					<option value="callback" selected="selected">Модуль "Обратная связь"</option>
+					<?php } else { ?>
+					<option value="callback">Модуль "Обратная связь"</option>
+					<?php } ?>
 					<?php if ($type == 'forgotten') { ?>
 					<option value="forgotten" selected="selected"><?php echo $text_forgotten; ?></option>
 					<?php } else { ?>

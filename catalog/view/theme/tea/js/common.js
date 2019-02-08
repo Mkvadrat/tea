@@ -144,7 +144,7 @@ function sendForm() {
         type: 'post',
         data: {
             'name': $('#name').val(),
-            'tel': $('#phone').val(),
+            'phone': $('#phone').val(),
             'message': $('#message').val(),
         },
         dataType: 'json',
