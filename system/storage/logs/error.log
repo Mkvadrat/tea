@@ -125,3 +125,7 @@
 2019-02-08 15:47:53 - PHP Notice:  Undefined index: phone in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 120
 2019-02-08 16:01:33 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 93
 2019-02-08 16:02:15 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 93
+2019-02-08 17:41:34 - PHP Notice:  Undefined variable: text_cooperation in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 36
+2019-02-08 17:41:34 - PHP Notice:  Undefined variable: text_contact_iformation in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 37
+2019-02-08 17:41:34 - PHP Notice:  Undefined variable: text_politics in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 47
+2019-02-08 17:51:53 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 8

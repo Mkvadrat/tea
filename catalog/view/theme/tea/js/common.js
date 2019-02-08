@@ -149,14 +149,25 @@ function sendForm() {
         },
         dataType: 'json',
         success: function (data) {
-            swal({
-                title: data.message,
-                text: "",
-                timer: 1000,
-                showConfirmButton: false
-            });
+									if(data.success){
+										$(".warning").html('');
+										
+										$(".reset_input").val('');
 
-            $.fancybox.close();
+										swal({
+														title: data.success,
+														text: "",
+														timer: 1000,
+														showConfirmButton: false
+										});
+
+										$.fancybox.close();
+									}
+									
+									if(data.error){
+										var error = data.error;
+										$(".warning").html('<div class="warning">' + error.join("") + '</div>');
+									}
         }
     });
 }

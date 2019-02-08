@@ -16,25 +16,7 @@ class ControllerExtensionModuleCallback extends Controller {
 	
 	public function sendForm(){
 		$json = array();
-		
-		if (isset($this->error['name'])) {
-			$json['message']['error_name'] = $this->error['name'];
-		} else {
-			$json['message']['error_name'] = '';
-		}
-
-		if (isset($this->error['phone'])) {
-			$json['message']['error_phone'] = $this->error['phone'];
-		} else {
-			$json['message']['error_phone'] = '';
-		}
-
-		if (isset($this->error['message'])) {
-			$json['message']['error_message'] = $this->error['message'];
-		} else {
-			$json['message']['error_message'] = '';
-		}
-		
+	
 		$site_url = $_SERVER['SERVER_NAME'];
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
@@ -49,7 +31,6 @@ class ControllerExtensionModuleCallback extends Controller {
 			
 			$mail->setTo($this->config->get('config_email'));
 			$mail->setFrom($site_url);
-            //$mail->setReplyTo($this->config->get('config_email'));
 			$mail->setSender(html_entity_decode($this->request->post['name'], ENT_QUOTES, 'UTF-8'));
 			$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
 			$mail->setText($this->request->post['message']);
@@ -101,26 +82,25 @@ class ControllerExtensionModuleCallback extends Controller {
 			if ($mail){
 				$json = array(
 					'status' => 200,
-					'message' => 'Ваше сообщение отправлено'
+					'success' => 'Ваше сообщение отправлено'
 				);
-			}else{
-				$json = array(
-					'status' => 1,
-					'message' => 'Ошибка, сообщение не отправлено!'
-				);
-			}
-		
-		
-		
+			}		
 		}
 		
+		$this->load->language('extension/module/callback');
 		
+		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+			$json['error'][] = $this->language->get('error_name');
+		}
 		
+		if ((utf8_strlen($this->request->post['phone']) < 3) || (utf8_strlen($this->request->post['phone']) > 32)) {
+			$json['error'][] = $this->language->get('error_phone');
+		}
 		
+		if ((utf8_strlen($this->request->post['message']) < 10) || (utf8_strlen($this->request->post['message']) > 3000)) {
+			$json['error'][] = $this->language->get('error_message');
+		}
 		
-		
-		
-
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
