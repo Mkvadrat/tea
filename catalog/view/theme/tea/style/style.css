@@ -5,6 +5,38 @@
 body{
   font-family: Arial;
 }
+.mini-item a{
+  color: red;
+}
+.ac-container a.list-group-item{
+  transition: 0.2s;
+}
+.ac-container a.list-group-item{
+
+}
+.ac-container a.list-group-item.active{
+  z-index: 2;
+  color: #fff;
+  background: #a0bf6a;
+  font-size: 24px;
+  border-color: #ffff;
+  border-width: 1px;
+}
+.ac-container a.list-group-item{
+  color: #fff;
+  background: #729534;
+
+  font-size: 24px;
+
+}
+.ac-container a.list-group-item:hover{
+  z-index: 2;
+  color: #fff;
+  background: #a0bf6a;
+  border-bottom: 1px solid #a0bf6a;
+  font-size: 24px;
+
+}
 .button{
   background: #80a938;
   text-decoration: none;
