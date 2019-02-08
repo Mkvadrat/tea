@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-8">
           <div class="nav-page">
-            <ul>
+            <ul id="content">
               <?php			
                 $count = count($breadcrumbs);
                 $i=1;
@@ -34,7 +34,7 @@
             <?php echo $description; ?>
           </div>
           <?php } ?>
-          
+
           <?php if ($products) { ?>
           <section class="list-style">
             <div class="style-left">

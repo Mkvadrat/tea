@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-8">
           <div class="nav-page">
-            <ul class="breadcrumbs">
+            <ul class="breadcrumbs" id="content">
               <?php			
                 $count = count($breadcrumbs);
                 $i=1;
@@ -164,37 +164,45 @@
             </div>
           </section>
           
+          <?php if ($products) { ?>
           <section class="other-products">
             <h3>Другие продукты в той же категории:</h3>
             <div class="sales-categoru">
               <div class="row">
-                
+                <?php foreach ($products as $product) { ?>
                 <div class="col-md-4">
                   <div class="sales-item-product">
                     <div class="sales-info-product">
                       <div class="sales-img-product">
-                        <a href="#"><img src="catalog/view/theme/tea/image/sales.png" alt="sales" width="120" height="200"></a>
+                        <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="120" height="200"></a>
                       </div>
                       <div class="sales-desc-product">
-                        <a href="#">Фиточай Предгорье мягкая упаковка 60 гр.</a>
-                        <p>Приготовлен из экологически чистых дикорастущих целебных трав и плодов Крыма. Содержит комплекс биологически активных веществ...</p>
+                        <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+                        <p><?php echo $product['description']; ?></p>
                       </div>
                       <div class="more-product">
-                        <a href="#">Подробнее</a>
+                        <a href="<?php echo $product['href']; ?>">Подробнее</a>
                       </div>
                       <div class="price-sales-product">
-                        <p>Цена опт: 80.00 руб</p>
+                        <?php if ($product['price']) { ?>
+                          <?php if (!$product['special']) { ?>
+                          <p>Цена опт: <?php echo $product['price']; ?></p>
+                          <?php } else { ?>
+                          <p>Цена опт: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
+                          <?php } ?>
+                        <?php } ?>
                       </div>
                     </div>
                     <div class="title-sales-card">
-                      <a href="#">Добавить в корзину</a>
+                      <a onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');">Добавить в корзину</a>
                     </div>
                   </div>
                 </div>
-
+                <?php } ?>
               </div>
             </div>
           </section>
+          <?php } ?>
         </div>
       </div>
     </div>
