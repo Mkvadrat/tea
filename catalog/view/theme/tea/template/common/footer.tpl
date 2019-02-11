@@ -45,7 +45,7 @@
           <div class="col-md-6">
             <div class="map">
               <div id="map"></div>
-              
+
               <?php if($geocode){ ?>
               <script>
                 //start maps
@@ -59,7 +59,7 @@
                     }, {
                       searchControlProvider: 'yandex#search'
                     });
-                
+
                       if (window.matchMedia("(max-width: 1500px)").matches) {
                       myMap.setCenter([<?php echo $geocode; ?>])
                       };
@@ -69,21 +69,21 @@
                       if (window.matchMedia("(max-width: 767px)").matches) {
                       myMap.setCenter([<?php echo $geocode; ?>])
                       };
-                
+
                   myGeoObject = new ymaps.GeoObject({
                       properties: {
                         iconContent: 'Lorem',
                         hintContent: 'Компания "Lorem"'
                       }
                       }, {
-                       
+
                       preset: 'islands#blackStretchyIcon',
-                
+
                       draggable: false,
                     });
                   myMap.behaviors
                     .disable('scrollZoom')
-                    
+
                     myMap.geoObjects
                     .add(myGeoObject)
                     .add(new ymaps.Placemark([<?php echo $geocode; ?>], {
@@ -93,7 +93,7 @@
                     }))
                   }
                  //end maps
-                 
+
 
               </script>
               <?php } ?>
