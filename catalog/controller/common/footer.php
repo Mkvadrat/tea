@@ -20,11 +20,11 @@ class ControllerCommonFooter extends Controller {
 		$data['text_wishlist'] = $this->language->get('text_wishlist');
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 		
-		$data['address'] = html_entity_decode(nl2br($this->config->get('config_address')), ENT_QUOTES, 'UTF-8');
-		$data['open'] = html_entity_decode(nl2br($this->config->get('config_open')), ENT_QUOTES, 'UTF-8');
-		$data['footer_telephone'] = html_entity_decode(nl2br($this->config->get('config_footer_telephone')), ENT_QUOTES, 'UTF-8');
-		$data['email'] = html_entity_decode(nl2br($this->config->get('config_email')), ENT_QUOTES, 'UTF-8');
-		$data['wrapper'] = html_entity_decode(nl2br($this->config->get('config_wrapper')), ENT_QUOTES, 'UTF-8');
+		$data['address'] = html_entity_decode($this->config->get('config_address'), ENT_QUOTES, 'UTF-8');
+		$data['open'] = html_entity_decode($this->config->get('config_open'), ENT_QUOTES, 'UTF-8');
+		$data['footer_telephone'] = html_entity_decode(($this->config->get('config_footer_telephone'), ENT_QUOTES, 'UTF-8');
+		$data['email'] = html_entity_decode($this->config->get('config_email'), ENT_QUOTES, 'UTF-8');
+		$data['wrapper'] = html_entity_decode($this->config->get('config_wrapper'), ENT_QUOTES, 'UTF-8');
 		$data['geocode'] = $this->config->get('config_geocode');
 		$data['geoname'] = $this->config->get('config_geoname');
 		
