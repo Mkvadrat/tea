@@ -88,8 +88,8 @@ class ControllerCommonHeader extends Controller {
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 		$data['contact'] = $this->url->link('information/contact');
 		
-		$data['address'] = html_entity_decode(nl2br($this->config->get('config_address')), ENT_QUOTES, 'UTF-8');
-		$data['open'] = html_entity_decode(nl2br($this->config->get('config_open')), ENT_QUOTES, 'UTF-8');
+		$data['address'] = html_entity_decode($this->config->get('config_address'), ENT_QUOTES, 'UTF-8');
+		$data['open'] = html_entity_decode($this->config->get('config_open'), ENT_QUOTES, 'UTF-8');
 		$data['cooperation'] = html_entity_decode($this->config->get('config_cooperation'), ENT_QUOTES, 'UTF-8');
 		$data['telephone'] = html_entity_decode($this->config->get('config_telephone'), ENT_QUOTES, 'UTF-8');
 

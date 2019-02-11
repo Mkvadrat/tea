@@ -17,7 +17,7 @@ class ControllerInformationContact extends Controller {
 
 		$data['heading_title'] = $this->language->get('heading_title');
 		
-		$data['contacts'] = html_entity_decode(nl2br($this->config->get('config_contacts')), ENT_QUOTES, 'UTF-8');
+		$data['contacts'] = html_entity_decode($this->config->get('config_contacts'), ENT_QUOTES, 'UTF-8');
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
