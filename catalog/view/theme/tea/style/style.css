@@ -1802,7 +1802,10 @@ button.fancybox-button.fancybox-button--thumbs{
 .ac-container div:last-child input:checked + label, .ac-container input:checked + label:hover{
   border-radius:0;
 }
-
 .current-none-active{
   display: none;
+}
+.warning{
+  font-size: 12px !important;
+  background: red;
 }

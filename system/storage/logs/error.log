@@ -48,3 +48,107 @@
 2019-02-06 15:52:34 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 2
 2019-02-06 15:52:34 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 4
 2019-02-07 11:00:01 - PHP Notice:  Undefined index: separator in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\category.tpl on line 18
+2019-02-08 10:47:15 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 10:47:15 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:22:59 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\information\contact.php on line 209
+2019-02-08 11:24:30 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 177
+2019-02-08 11:24:30 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 181
+2019-02-08 11:24:30 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 185
+2019-02-08 11:24:33 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\tea.loc\catalog\controller\startup\error.php:34) in D:\OpenServer\domains\tea.loc\system\library\response.php on line 12
+2019-02-08 11:24:54 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 177
+2019-02-08 11:24:54 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 185
+2019-02-08 11:24:56 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\tea.loc\catalog\controller\startup\error.php:34) in D:\OpenServer\domains\tea.loc\system\library\response.php on line 12
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 8
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: error_name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 9
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 18
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: error_enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 19
+2019-02-08 11:27:27 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 11:27:48 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 8
+2019-02-08 11:27:48 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:27:48 - PHP Notice:  Undefined variable: enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 18
+2019-02-08 11:27:48 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 11:28:32 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 177
+2019-02-08 11:28:32 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 181
+2019-02-08 11:28:32 - PHP Notice:  Indirect modification of overloaded property ControllerExtensionModuleCallback::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 185
+2019-02-08 11:28:35 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\tea.loc\catalog\controller\startup\error.php:34) in D:\OpenServer\domains\tea.loc\system\library\response.php on line 12
+2019-02-08 11:36:41 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:36:41 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:36:42 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:36:42 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:37:54 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:37:58 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:38:00 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:41:17 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 84
+2019-02-08 11:43:40 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\information\contact.php on line 209
+2019-02-08 11:44:35 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\information\contact.php on line 209
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: action in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 3
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 8
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: error_name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 9
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 18
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: error_enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 19
+2019-02-08 11:50:08 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: action in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 3
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 8
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: error_name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 9
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 18
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: error_enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 19
+2019-02-08 11:50:10 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: action in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 3
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 8
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: error_name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 9
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 18
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: error_enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 19
+2019-02-08 11:50:31 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 11:50:42 - PHP Notice:  Undefined variable: module in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\banner.tpl on line 2
+2019-02-08 11:50:42 - PHP Notice:  Undefined variable: banners in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\banner.tpl on line 3
+2019-02-08 11:50:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\banner.tpl on line 3
+2019-02-08 11:50:42 - PHP Notice:  Undefined variable: module in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\banner.tpl on line 15
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: action in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 3
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 8
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: error_name in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 9
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 13
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: error_phone in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 14
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 18
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: error_enquiry in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 19
+2019-02-08 11:52:39 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 11:53:34 - PHP Notice:  Undefined variable: action in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 3
+2019-02-08 11:53:34 - PHP Notice:  Undefined variable: captcha in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\extension\module\callback.tpl on line 23
+2019-02-08 15:47:23 - PHP Notice:  Undefined index: phone in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 120
+2019-02-08 15:47:53 - PHP Notice:  Undefined index: phone in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 120
+2019-02-08 16:01:33 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 93
+2019-02-08 16:02:15 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\extension\module\callback.php on line 93
+2019-02-08 17:41:34 - PHP Notice:  Undefined variable: text_cooperation in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 36
+2019-02-08 17:41:34 - PHP Notice:  Undefined variable: text_contact_iformation in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 37
+2019-02-08 17:41:34 - PHP Notice:  Undefined variable: text_politics in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 47
+2019-02-08 17:51:53 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\contact.tpl on line 8
+2019-02-11 9:58:05 - PHP Notice:  Undefined index: separator in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\information.tpl on line 20
+2019-02-11 9:58:39 - PHP Notice:  Undefined index: separator in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\information.tpl on line 20
+2019-02-11 9:58:42 - PHP Notice:  Undefined index: separator in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\information.tpl on line 20
+2019-02-11 12:11:56 - PHP Notice:  Use of undefined constant description_blog - assumed 'description_blog' in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 22
+2019-02-11 12:12:52 - PHP Notice:  Use of undefined constant description_blog - assumed 'description_blog' in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 22
+2019-02-11 12:12:56 - PHP Notice:  Use of undefined constant description_blog - assumed 'description_blog' in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 22
+2019-02-11 12:13:36 - PHP Notice:  Use of undefined constant description_blog - assumed 'description_blog' in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 22
+2019-02-11 12:13:50 - PHP Notice:  Use of undefined constant description_blog - assumed 'description_blog' in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 22
+2019-02-11 12:16:02 - PHP Notice:  Undefined index: separator in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 20
+2019-02-11 12:46:32 - PHP Notice:  Undefined variable: description_blog in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 34
+2019-02-11 12:46:32 - PHP Notice:  Undefined variable: seo_blog in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 71
+2019-02-11 12:46:53 - PHP Notice:  Undefined variable: description_blog in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 34
+2019-02-11 12:46:53 - PHP Notice:  Undefined variable: seo_blog in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 71
+2019-02-11 12:48:48 - PHP Notice:  Undefined variable: description_blog in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 34
+2019-02-11 12:48:48 - PHP Notice:  Undefined variable: seo_blog in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\news_list.tpl on line 71
+2019-02-11 12:54:29 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 31
+2019-02-11 12:54:29 - PHP Notice:  Undefined variable: news_list in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 35
+2019-02-11 12:54:29 - PHP Notice:  Undefined variable: text_empty in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 57
+2019-02-11 12:54:29 - PHP Notice:  Undefined variable: continue in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 59
+2019-02-11 12:54:29 - PHP Notice:  Undefined variable: button_continue in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 59
+2019-02-11 13:03:20 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 31
+2019-02-11 13:03:20 - PHP Notice:  Undefined variable: description in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 36
+2019-02-11 13:04:12 - PHP Notice:  Undefined variable: heading_title in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\information\error_news.tpl on line 31

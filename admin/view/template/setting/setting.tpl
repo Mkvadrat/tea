@@ -216,6 +216,12 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-contacts">Контактные данные на странице обратной связи</label>
+                <div class="col-sm-10">
+                  <textarea name="config_contacts" rows="5" placeholder="Контактные данные на странице обратной связи" id="input-contacts" class="form-control summernote"><?php echo $config_contacts; ?></textarea>
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-payment">Системы оплаты на странице товара</label>
                 <div class="col-sm-10">
                   <textarea name="config_payment" rows="5" placeholder="Системы оплаты на странице товара" id="input-payment" class="form-control summernote"><?php echo $config_payment; ?></textarea>

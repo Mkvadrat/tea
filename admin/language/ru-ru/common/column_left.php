@@ -104,3 +104,5 @@ $_['text_other_status']          	        = 'Другие статусы';
 $_['text_octeam_toolset']              		= 'OC Team';
 $_['text_custommenu']                       = 'Меню в шапке сайта';
 $_['text_custommenu_footer']                = 'Меню в подвале сайта';
+$_['text_news']                             = 'Блог';
+$_['text_settings_news']                    = 'Настройки блога';

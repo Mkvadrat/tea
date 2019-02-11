@@ -593,6 +593,12 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_payment'] = $this->config->get('config_payment');
 		}
+		
+		if (isset($this->request->post['config_contacts'])) {
+			$data['config_contacts'] = $this->request->post['config_contacts'];
+		} else {
+			$data['config_contacts'] = $this->config->get('config_contacts');
+		}
 
 		if (isset($this->request->post['config_fax'])) {
 			$data['config_fax'] = $this->request->post['config_fax'];
