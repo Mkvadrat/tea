@@ -1,21 +1,41 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <?php echo $description; ?><?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
+
+<section class="card">
+  <div class="container">
+    <div class="row sidebar">
+      <div class="col-md-4 sidebar">
+        <div class="sidebar">
+          <?php echo $column_left; ?>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="nav-page">
+          <ul>
+            <?php			
+              $count = count($breadcrumbs);
+              $i=1;
+              foreach ($breadcrumbs as $breadcrumb) {
+                if($i!=$count){
+            ?>
+                  <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a><?php echo ' ' . $breadcrumb['separator']; ?></li>
+            <?php
+                }else{
+                  echo '<li class="activ">'.$breadcrumb['text'] . '</li>'; 
+                }		
+                $i++;
+              } 
+            ?>
+          </ul>
+        </div>
+        <div class="name-product">
+          <h1><?php echo $heading_title; ?></h1>
+        </div>
+        <div class="wrapper-text">
+          <?php echo $description; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
 <?php echo $footer; ?>
