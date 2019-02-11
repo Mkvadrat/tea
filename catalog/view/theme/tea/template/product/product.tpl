@@ -114,7 +114,13 @@
             </div>
             
             <div class="tab-content">
-              <div class="tab-pane active tabcontent" id="tab-description"><?php echo $more; ?></div>
+              <div class="tab-pane active tabcontent" id="tab-description">
+                <?php if($description){ ?>
+                <?php echo $description; ?>
+                <?php }else{ ?>
+                <?php echo $more; ?>
+                <?php } ?>
+              </div>
               <?php if ($review_status) { ?>
               <div class="tab-pane tabcontent" id="tab-review">
                 <form class="form-horizontal" id="form-review">

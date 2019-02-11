@@ -20,12 +20,14 @@ class ControllerProductManufacturer extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home')
+			'href' => $this->url->link('common/home'),
+			'separator' => $this->language->get('text_separator')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_brand'),
-			'href' => $this->url->link('product/manufacturer')
+			'href' => $this->url->link('product/manufacturer'),
+			'separator' => $this->language->get('text_separator')
 		);
 
 		$data['categories'] = array();
@@ -106,12 +108,14 @@ class ControllerProductManufacturer extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home')
+			'href' => $this->url->link('common/home'),
+			'separator' => $this->language->get('text_separator')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_brand'),
-			'href' => $this->url->link('product/manufacturer')
+			'href' => $this->url->link('product/manufacturer'),
+			'separator' => $this->language->get('text_separator')
 		);
 
 		$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($manufacturer_id);
@@ -139,7 +143,8 @@ class ControllerProductManufacturer extends Controller {
 
 			$data['breadcrumbs'][] = array(
 				'text' => $manufacturer_info['name'],
-				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
+				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url),
+				'separator' => $this->language->get('text_separator')
 			);
 
 			if ($manufacturer_info['meta_title']) {
@@ -409,7 +414,8 @@ class ControllerProductManufacturer extends Controller {
 
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_error'),
-				'href' => $this->url->link('product/manufacturer/info', $url)
+				'href' => $this->url->link('product/manufacturer/info', $url),
+				'separator' => $this->language->get('text_separator')
 			);
 
 			$this->document->setTitle($this->language->get('text_error'));
