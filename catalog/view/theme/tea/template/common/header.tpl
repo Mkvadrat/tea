@@ -117,7 +117,6 @@
             </div>
           </div>
           <?php echo $cart; ?>
-          <?php echo $search; ?>
         </div>
       </div>
     </div>
