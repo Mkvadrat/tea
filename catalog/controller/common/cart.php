@@ -46,6 +46,17 @@ class ControllerCommonCart extends Controller {
 
 			array_multisort($sort_order, SORT_ASC, $totals);
 		}
+		
+		//search
+		$this->load->language('common/search');
+
+		$data['text_search'] = $this->language->get('text_search');
+
+		if (isset($this->request->get['search'])) {
+			$data['search'] = $this->request->get['search'];
+		} else {
+			$data['search'] = '';
+		}
 
 		$data['text_empty'] = $this->language->get('text_empty');
 		$data['text_cart'] = $this->language->get('text_cart');
