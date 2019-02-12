@@ -117,6 +117,7 @@
             </div>
           </div>
           <?php echo $cart; ?>
+          <?php echo $search; ?>
         </div>
       </div>
     </div>
@@ -143,7 +144,7 @@
             <li class="items"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
             <?php } ?>
             <?php } ?>
-            
+
             <?php if(count($categories) > 6){ ?>
             <li><a href="#" class="archive"></a></li>
             <?php } ?>

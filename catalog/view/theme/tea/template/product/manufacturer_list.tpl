@@ -3,10 +3,7 @@
   <section class="card">
     <div class="container">
       <div class="row sidebar">
-        <div class="col-md-4 sidebar">
-          <?php echo $column_left; ?>
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="nav-page">
             <ul>
               <?php			

@@ -9,7 +9,9 @@
 body{
   font-family: ProximaNova;
 }
-
+div#search {
+    margin: 0 0 20px;
+}
 .ac-container a.list-group-item{
   transition: 0.2s;
 }
