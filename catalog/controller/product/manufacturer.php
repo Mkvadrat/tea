@@ -170,6 +170,8 @@ class ControllerProductManufacturer extends Controller {
 			}
 
 			$data['description'] = html_entity_decode($manufacturer_info['description'], ENT_QUOTES, 'UTF-8');
+			
+			$data['bottom_description'] = html_entity_decode($manufacturer_info['bottom_description'], ENT_QUOTES, 'UTF-8');
 
 			$data['text_empty'] = $this->language->get('text_empty');
 			$data['text_quantity'] = $this->language->get('text_quantity');
@@ -211,6 +213,12 @@ class ControllerProductManufacturer extends Controller {
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				}
+				
+				if ($result['image']) {
+					$list_image = $this->model_tool_image->resize($result['image'], 200, 320);
+				} else {
+					$list_image = $this->model_tool_image->resize('placeholder.png', 200, 320);
+				}
 
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
@@ -239,6 +247,7 @@ class ControllerProductManufacturer extends Controller {
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
+					'list_thumb'  => $list_image,
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $price,
