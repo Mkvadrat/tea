@@ -147,7 +147,7 @@
           </div>
           <?php } ?>
           
-          <?php if($bottom_description){ ?>
+          <?php if($description){ ?>
           <section class="test-seo">
             <?php echo $bottom_description; ?>
           </section>

@@ -92,23 +92,23 @@
     <div class="header-info">
       <div class="container">
         <div class="row header-desk">
-          <div class="col-md-2 logo">
+          <div class="col-md-2 col-sm-2 col-xs-12 logo">
             <?php if ($logo) { ?>
               <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" width="180" height="80" /></a>
             <?php } else { ?>
               <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
             <?php } ?>
           </div>
-          <div class="col-md-3 cooperation">
+          <div class="col-md-3 col-sm-4 col-xs-6 cooperation">
             <p><?php echo $address; ?></p>
             <?php echo $cooperation; ?>
           </div>
-          <div class="col-md-5 data-info">
+          <div class="col-md-5 col-sm-6 col-xs-6 data-info">
             <div class="row">
-              <div class="col-md-6 data">
+              <div class="col-md-6 col-sm-6 col-xs-6 data">
                 <p><?php echo $open; ?></p>
               </div>
-              <div class="col-md-6 phone">
+              <div class="col-md-6 col-sm-6 col-xs-6 phone">
                 <div class="phone-icon">
                   <img src="catalog/view/theme/tea/image/phone.png" alt="phone" width="24" height="24">
                 </div>

@@ -10,7 +10,7 @@ body{
   font-family: ProximaNova;
 }
 div#search {
-    margin: 0 0 20px;
+    margin: 0 0 20px 0;
 }
 .ac-container a.list-group-item{
   transition: 0.2s;
@@ -23,8 +23,6 @@ div#search {
   color: #fff;
   background: #a0bf6a;
   font-size: 24px;
-  /* border-color: #ffff; */
-  /* border-width: 1px; */
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
@@ -205,6 +203,7 @@ header{
   display: flex;
   align-items: center;
   margin: 30px 0 0 0;
+  flex-wrap: wrap;
 }
 .slider-info{
   position: absolute;
@@ -1830,3 +1829,260 @@ button.fancybox-button.fancybox-button--thumbs{
   border-top-right-radius: 15px;
   border:none;
 }
+@media only screen and (max-width: 1200px) {
+	.row.header-desk{
+		display:block;
+	}
+	.logo a img{
+	width: 129px;
+    height: 73px;
+	}
+	.basket input.form-control.input-lg{
+		height: 30px;
+	}
+	.basket button.btn.btn-default.btn-lg{
+		height: 30px;
+	}
+	.basket .btn, .btn-lg{
+		line-height: 0;
+		font-size:15px;
+		padding:5px 10px;
+	}
+	.phone-icon{
+		left:0;
+	}
+	.basket a{
+		width: 140px;
+	}
+	div#search{
+		width:140px;
+	}
+	.slogan-text{
+		font-size:22px;
+	}
+	.slogan-text p{
+		width: 63%;
+		padding:0 30px 0 0;
+	}
+	.info-tea p {
+		font-size:22px;
+		padding: 50px 20px 0 20px;
+		text-align:center;
+	}
+	.tea-wrapper{
+		flex-wrap:wrap;
+	}
+	.tea-item p{
+		text-align:left;
+		padding:0;
+		font-size:16px;
+	}
+	.tea-item img{
+		height:40px;
+		width: 50px;
+	}
+	.product-item img{
+		width: 200px;
+		height: 150px;
+	}
+	.title-pro{
+		bottom: 20px;
+	}
+	.company-img img{
+		width:100%;
+	}
+	.form-info input {
+		width:250px;
+	}
+	::-webkit-input-placeholder {color:#383838; font-size: 16px}
+	::-moz-placeholder          {color:#383838; font-size: 16px}
+	:-moz-placeholder           {color:#383838; font-size: 16px}
+	:-ms-input-placeholder      {color:#383838; font-size: 16px}
+	.footer-slogan h2{
+		font-size:45px;
+	}
+	.footer-product nav{
+		height:175px;
+	}
+	.map{
+		height:650px;
+	}
+}
+	@media only screen and (max-width: 992px) {
+		.col-md-6.data{
+			padding:0;
+		}
+		header{
+			height:300px;
+		}
+		div#search{
+			float:left;
+		}
+		.basket a{
+			float:right;
+			margin: 20px 0 0 0;
+		}
+		.basket input.form-control.input-lg{
+			height:40px;
+			width:200px;
+			margin:20px 0 0 0;
+		}
+		.basket button.btn.btn-default.btn-lg{
+			height: 40px;
+			margin: 20px 0 0 0
+		}
+		.franchising-wrapper p{
+			padding:0;
+		}
+		.form-info input{
+			width:200px;
+		}
+		.form-wrapper span{
+			text-align:center;
+		}
+		.form{
+			height:350px;
+		}
+	::-webkit-input-placeholder {color:#383838; font-size: 10px}
+	::-moz-placeholder          {color:#383838; font-size: 10px}
+	:-moz-placeholder           {color:#383838; font-size: 10px}
+	:-ms-input-placeholder      {color:#383838; font-size: 10px}
+	}
+	
+	@media only screen and (max-width: 900px) {
+		.col-md-2.col-sm-12.logo{
+			text-align:center;
+			margin:0 0 20px 0;
+		}
+		.col-md-6.data{
+			padding:0 30px 0 0;
+		}
+		.franchising-wrapper p{
+			padding:0;
+		}
+		header{
+			height:350px;
+			background-position: unset;
+		}
+		.cooperation p{
+			text-align: center;
+		}
+		.cooperation a{
+			margin: 0 auto;
+			cursor: pointer;
+		}
+		.data p{
+			text-align:center;
+		}
+		div#search{
+			width:190px;
+			float: left;
+			margin: 30px 22px 0 0px;
+		}
+		.basket a{
+			float:right;
+			margin:25px 0 0 0;
+		}
+		.phone-icon{
+			left: -5px;
+		}
+		.slider-info{
+			top:20%;
+		}
+		.slider-info h1{
+			font-size:42px;
+		}
+		.slogan{
+			background-position-x: -40px;
+		}
+		.form-info{
+			display: flex;
+			flex-direction:column;
+			align-items: center;
+		}
+		.form{
+			height:100%
+		}
+		.form-info input{
+			margin: 0 0 10px 0;
+			width:400px;
+		}
+		.formname{
+			margin: 0 0 20px;
+		}
+		.form-wrapper span{
+			text-align:center;
+		}
+		.map{
+			margin: 0;
+		}
+			::-webkit-input-placeholder {color:#383838; font-size: 16px}
+	::-moz-placeholder          {color:#383838; font-size: 16px}
+	:-moz-placeholder           {color:#383838; font-size: 16px}
+	:-ms-input-placeholder      {color:#383838; font-size: 16px}
+	}
+	@media only screen and (max-width: 770px) {
+		.col-md-2.logo{
+			text-align:center;
+			margin: 0 0 20px 0;
+		}
+		.phone-icon{
+			left:65px;
+		}
+		header{
+			height:450px;
+		}
+		.basket input.form-control.input-lg{
+			height: 40px;
+			margin: 0px 0 0 55px;
+		}
+		.basket button.btn.btn-default.btn-lg{
+			margin:0;
+		}
+		.basket a{
+			margin: 30px 84px 0 0;
+			text-align:center;
+		}
+		
+		.slider-info h1{
+			font-size:28px;
+		}
+	}
+	@media only screen and (max-width: 670px){
+		.phone-icon{
+			left: 50px;
+		}
+	}
+	@media only screen and (max-width: 614px){
+		.col-md-3.col-sm-4.col-xs-6.cooperation{
+			width: 100%;
+		}
+		.phone-icon{
+			display:none;
+		}
+		.col-md-5.col-sm-6.col-xs-6.data-info{
+			width:100%;
+			margin: 20px 0 0 0;
+		}
+		.col-md-6.data{
+			padding: 10px 30px 0 0;
+		}
+		div#search{
+			float:none;
+			margin: 0 auto;
+		}
+		.basket input.form-control.input-lg{
+			margin: 0;
+		}
+		header{
+			height:520px;
+		}
+		.basket a {
+			margin: 30px 200px 0 0px;
+			text-align: center;
+			float: right;
+		}
+
+		
+
+	}
