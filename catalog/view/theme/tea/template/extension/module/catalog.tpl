@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <?php foreach($categories as $category){ ?>
-      <div class="col-md-3">
+      <div class="col-xs-12 col-sm-4 col-md-3">
         <div class="product-item">
           <div class="photobox photobox_type">
             <div class="photobox__previewbox">

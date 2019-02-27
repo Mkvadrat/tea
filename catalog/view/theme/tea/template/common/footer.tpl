@@ -103,5 +103,18 @@
       </div>
     </footer>
 
+    <!-- 14.02.19 -->
+    <script src="catalog/view/theme/tea/js/libs/mmenu/jquery.mmenu.all.js" type="text/javascript"></script>
+    <script>
+      jQuery(document).ready(function( $ ) {
+        $("#menu").mmenu({
+          "extensions": [
+            "pagedim-black",
+            "theme-dark"
+          ]
+        });
+      });
+    </script>
+    <!-- 14.02.19 -->
   </body>
 </html>

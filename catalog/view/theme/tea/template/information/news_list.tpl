@@ -3,12 +3,12 @@
 	<section class="category">
 	  <div class="container">
 		<div class="row sidebar">
-		  <div class="col-md-4 sidebar">
+		  <div class="col-md-4 col-sm-5 col-xs-12 sidebar">
 			<div class="sidebar">
 				<?php echo $column_left; ?>
 			</div>
 		  </div>
-		  <div class="col-md-8">
+		  <div class="col-md-8 col-sm-7 col-xs-12">
 			<div class="nav-page">
 			  <ul>
 				<?php			
@@ -40,12 +40,12 @@
 				<div class="col-md-12">
 				  <div class="blog-item">
 					<div class="row">
-					  <div class="col-md-5">
+					  <div class="col-md-5 col-sm-12 col-xs-12">
 						<div class="blog-img">
 						  <a href="<?php echo $news['href']; ?>"><img src="<?php echo $news['thumb']; ?>" width="300" height="200" alt="blog"></a>
 						</div>
 					  </div>
-					  <div class="col-md-7">
+					  <div class="col-md-7 col-sm-12 col-xs-12">
 						<div class="blog-desk">
 						  <a href="<?php echo $news['href']; ?>"><?php echo $news['title']; ?></a>
 						  <p><?php echo $news['description']; ?></p>
@@ -74,5 +74,12 @@
 		</div>
 	  </div>
 	</section>
-	
+<script>
+	$(document).ready(function() {
+		$('.sidebar .sidebar-title').on('click', function () {
+			$(this).toggleClass('open');
+			$(this).parent().find('.ac-container').toggleClass('open');
+		})
+	});
+</script>
 <?php echo $footer; ?>

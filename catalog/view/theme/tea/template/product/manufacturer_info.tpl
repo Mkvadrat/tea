@@ -3,10 +3,10 @@
   <section class="category">
     <div class="container">
       <div class="row sidebar">
-        <div class="col-md-4 sidebar">
+        <div class="col-md-4 col-sm-5 col-xs-12 sidebar">
           <?php echo $column_left; ?>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-sm-7 col-xs-12">
           <div class="nav-page">
             <ul id="content">
               <?php			
@@ -36,43 +36,40 @@
           <?php } ?>
 
           <?php if ($products) { ?>
-          <section class="list-style">
-            <div class="style-left">
-              <div class="view-item">
-                <p>Вид:</p>
-                <button type="button" id="grid-view"> <img src="catalog/view/theme/tea/image/block-list.png" width="16" height="16" alt=""> </button>
-                <button type="button" id="list-view"> <img src="catalog/view/theme/tea/image/block-list1.png" width="16" height="16" alt=""> </button>
-
-                <p>Сортировка:</p>
-                <select id="input-sort" onchange="location = this.value;">
-                  <?php foreach ($sorts as $sorts) { ?>
-                  <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-                  <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-                  <?php } else { ?>
-                  <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-                  <?php } ?>
-                  <?php } ?>
-                </select>
+          <section class="list-filter list-style container-fluid">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="style-left">
+                  <div class="view-item">
+                    <div class="row">
+                      <div class="col-md-5 col-sm-5 col-xs-6">
+                        <span>Вид:</span>
+                        <button type="button" id="grid-view"> <img src="catalog/view/theme/tea/image/block-list.png" width="16" height="16" alt=""> </button>
+                        <button type="button" id="list-view"> <img src="catalog/view/theme/tea/image/block-list1.png" width="16" height="16" alt=""> </button>
+                      </div>
+                      <div class="col-md-7 col-sm-7 col-xs-6">
+                        <span>Сортировка:</span>
+                        <select id="input-sort" onchange="location = this.value;">
+                          <?php foreach ($sorts as $sorts) { ?>
+                          <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+                          <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+                          <?php } else { ?>
+                          <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+                          <?php } ?>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="style-right">
-              <p>Показать:</p>
-              <select id="input-limit" onchange="location = this.value;">
-                <?php foreach ($limits as $limits) { ?>
-                <?php if ($limits['value'] == $limit) { ?>
-                <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-                <?php } else { ?>
-                <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-                <?php } ?>
-                <?php } ?>
-              </select>
             </div>
           </section>
         
           <div class="sales-categoru">
             <div class="row">
               <?php foreach ($products as $product) { ?>
-              <div class="col-md-4 grid">
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12  grid">
                 <div class="sales-item-product">
                   <div class="sales-info-product">
                     <div class="sales-img-product">
@@ -154,5 +151,12 @@
       </div>
     </div>
   </section>
-  
+<script>
+  $(document).ready(function() {
+    $('.sidebar .sidebar-title').on('click', function () {
+      $(this).toggleClass('open');
+      $(this).parent().find('.ac-container').toggleClass('open');
+    })
+  });
+</script>
 <?php echo $footer; ?>

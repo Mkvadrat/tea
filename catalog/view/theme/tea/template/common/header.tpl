@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="catalog/view/theme/tea/js/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
 <link rel="stylesheet" href="catalog/view/theme/tea/style/sweetalert.css">
 <link rel="stylesheet" href="catalog/view/theme/tea/js/libs/fancybox-master/dist/jquery.fancybox.min.css">
+<link rel="stylesheet" href="catalog/view/theme/tea/js/libs/mmenu/jquery.mmenu.all.css">
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <script src="catalog/view/theme/tea/js/libs/jquery/jquery.min.js"></script>
@@ -41,7 +42,6 @@
 <script src="catalog/view/theme/tea/js/libs/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="catalog/view/theme/tea/js/sweetalert.min.js" type="text/javascript"></script>
-
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -59,6 +59,10 @@
 <body>
   <header>
     <div class="top-header">
+      <div class="menu-triggers">
+        <a href="#menu" class="mmenu-trigger"><span></span></a>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="col-md-10 top-nav">
@@ -92,18 +96,18 @@
     <div class="header-info">
       <div class="container">
         <div class="row header-desk">
-          <div class="col-md-2 col-sm-2 col-xs-12 logo">
+          <div class="col-md-2 col-sm-3 col-xs-12 logo">
             <?php if ($logo) { ?>
               <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" width="180" height="80" /></a>
             <?php } else { ?>
               <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
             <?php } ?>
           </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 cooperation">
+          <div class="col-md-3 col-sm-9 col-xs-12 cooperation">
             <p><?php echo $address; ?></p>
             <?php echo $cooperation; ?>
           </div>
-          <div class="col-md-5 col-sm-6 col-xs-6 data-info">
+          <div class="col-md-5 col-sm-12 col-xs-12 data-info">
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-6 data">
                 <p><?php echo $open; ?></p>
@@ -154,3 +158,30 @@
       </div>
     </div>
   </div>
+  <nav id="menu" style="opacity: 0;">
+    <ul>
+      <?php if($categories){ ?>
+      <?php foreach ($categories as $category) { ?>
+      <?php if ($category['children']) { ?>
+      <li>
+        <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+        <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+        <ul>
+          <?php foreach ($children as $child) { ?>
+          <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
+          <?php } ?>
+        </ul>
+        <?php } ?>
+      </li>
+      <?php } else { ?>
+      <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+      <?php } ?>
+      <?php } ?>
+      <?php } ?>
+    <?php if($custommenu){ ?>
+      <?php foreach($custommenu as $menu){ ?>
+      <li><a href="<?php echo $menu['href']; ?>"><?php echo $menu['name']; ?></a></li>
+      <?php } ?>
+      <?php } ?>
+    </ul>
+  </nav>

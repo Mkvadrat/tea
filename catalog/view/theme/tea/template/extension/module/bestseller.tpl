@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <?php foreach($products as $product){ ?>
-      <div class="col-md-4">
+      <div class="cal-xs-12 col-sm-6 col-md-4">
         <div class="sales-item">
           <div class="sales-info">
             <div class="sales-img">
@@ -32,8 +32,8 @@
             <a onclick="cart.add('<?php echo $product['product_id']; ?>');">Добавить в корзину</a>
           </div>
         </div>
-        <?php } ?>
       </div>
+      <?php } ?>
     </div>
   </div>
 </section>

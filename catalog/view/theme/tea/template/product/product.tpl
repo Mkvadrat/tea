@@ -3,10 +3,10 @@
   <section class="card">
     <div class="container">
       <div class="row sidebar">
-        <div class="col-md-4 sidebar">
+        <div class="col-md-4 col-sm-5 col-xs-12 sidebar">
           <?php echo $column_left; ?>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-sm-7 col-xs-12">
           <div class="nav-page">
             <ul class="breadcrumbs" id="content">
               <?php			
@@ -176,7 +176,7 @@
             <div class="sales-categoru">
               <div class="row">
                 <?php foreach ($products as $product) { ?>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                   <div class="sales-item-product">
                     <div class="sales-info-product">
                       <div class="sales-img-product">
@@ -297,5 +297,13 @@
       grecaptcha.reset();
   });
   </script>
-  
+
+<script>
+  $(document).ready(function() {
+    $('.sidebar .sidebar-title').on('click', function () {
+      $(this).toggleClass('open');
+      $(this).parent().find('.ac-container').toggleClass('open');
+    })
+  });
+</script>
 <?php echo $footer; ?>
