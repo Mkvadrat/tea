@@ -3,12 +3,10 @@
 <section class="card">
   <div class="container">
     <div class="row sidebar">
-      <div class="col-md-4 sidebar">
-        <div class="sidebar">
+      <div class="col-xs-12 sidebar sidebar__block">
           <?php echo $column_left; ?>
-        </div>
       </div>
-      <div class="col-md-8">
+      <div class="col-xs-12 catalog__block">
         <div class="nav-page">
           <ul>
             <?php			
@@ -37,5 +35,12 @@
     </div>
   </div>
 </section>
-    
+    <script>
+  $(document).ready(function() {
+    $('.sidebar .sidebar-title').on('click', function () {
+      $(this).toggleClass('open');
+      $(this).parent().find('.ac-container').toggleClass('open');
+    })
+  });
+</script>
 <?php echo $footer; ?>

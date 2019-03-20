@@ -9,7 +9,7 @@
         <div class="sales-item">
           <div class="sales-info">
             <div class="sales-img">
-              <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="194" height="275"></a>
+              <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="194" height="auto"></a>
             </div>
             <div class="sales-desc">
               <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
@@ -21,9 +21,9 @@
             <div class="price-sales">
               <?php if ($product['price']) { ?>
                 <?php if (!$product['special']) { ?>
-                <span>Цена опт: <?php echo $product['price']; ?></span>
+                <span>Цена: <?php echo $product['price']; ?></span>
                 <?php } else { ?>
-                <span>Цена опт: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></span>
+                <span>Цена: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></span>
                 <?php } ?>
               <?php } ?>
             </div>

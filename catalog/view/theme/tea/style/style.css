@@ -569,7 +569,7 @@ span.photobox__label a:hover {
     font-size: 24px;
     font-weight: bold;
     color: #000000;
-    margin: 0 0 25px 25px;
+    margin: 0 35px 25px 25px;
     line-height: 28px;
 }
 
@@ -1348,7 +1348,7 @@ a.phone-big:hover {
     text-decoration: none;
     font-size: 16px;
     color: #000000;
-    margin: 65px 20px 10px 10px;
+    margin: 0 20px 10px 10px;
 }
 
 .zoom-img a:hover {
@@ -2185,6 +2185,7 @@ button.fancybox-button.fancybox-button--thumbs {
 
 .company-img img {
     height: auto;
+    width: 100%;
 }
 
 .sales-item {
@@ -2337,6 +2338,40 @@ button.fancybox-button.fancybox-button--thumbs {
     margin-bottom: 30px;
 }
 /*14.02.19*/
+
+
+.descriptions-img img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px){
+	.sidebar__block{
+		width: 300px;
+	}
+	.catalog__block{
+		width: calc(100% - 300px - 30px);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 768px) {
     .row.company {
@@ -3076,4 +3111,7 @@ button.fancybox-button.fancybox-button--thumbs {
     /*14.02.19*/
 
 
+}
+.sales-info-product img {
+    max-width: 100%;
 }

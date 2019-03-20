@@ -2,11 +2,7 @@
   
   <section class="card">
     <div class="container">
-      <div class="row sidebar">
-        <div class="col-md-4 col-sm-5 col-xs-12 sidebar">
-          <?php echo $column_left; ?>
-        </div>
-        <div class="col-md-8 col-sm-7 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="nav-page">
             <ul class="breadcrumbs" id="content">
               <?php			
@@ -30,17 +26,17 @@
           </div>
           <div class="row">
             <?php if ($thumb) { ?>
-            <div class="col-md-5">
+            <div class="col-md-6">
               <div class="descriptions-img">
-                  <a data-fancybox="gallery" href="<?php echo $popup; ?>"  width="194" height="275"><img src="<?php echo $thumb; ?>" alt="sales" width="194" height="275"></a>
+                  <a data-fancybox="gallery" href="<?php echo $popup; ?>" ><img src="<?php echo $thumb; ?>" alt="sales" ></a>
                 <div class="zoom-img">
-                    <a data-fancybox="gallery" href="<?php echo $popup; ?>"  width="194" height="275"><img src="catalog/view/theme/tea/image/zoom-img.png" alt="zoom" width="18px" height="19">Увеличить изображение</a>
+                    <a data-fancybox="gallery" href="<?php echo $popup; ?>" ><img src="catalog/view/theme/tea/image/zoom-img.png" alt="zoom" width="18px" height="19">Увеличить изображение</a>
                 </div>
               </div>
             </div>
             <?php } ?>
             
-            <div class="col-md-7">
+            <div class="col-md-6">
               <div class="descriptions-text">
                 <?php echo $description; ?>
               </div>
@@ -48,9 +44,9 @@
               <div class="price-card">
                 <?php if ($price) { ?>
                   <?php if (!$special) { ?>
-                  <p>Цена опт: <?php echo $price; ?></p>
+                  <p>Цена: <?php echo $price; ?></p>
                   <?php } else { ?>
-                  <p>Цена опт: <?php echo $special; ?> <sup><strike><?php echo $price; ?></strike></sup></p>
+                  <p>Цена: <?php echo $special; ?> <sup><strike><?php echo $price; ?></strike></sup></p>
                   <?php } ?>
                 <?php } ?>
               </div>
@@ -64,7 +60,7 @@
                   </div>
                   <div class="button-card">
                     <a id="button-cart">Добавить в корзину</a>
-                    <a href="#">Сотрудничество и опт</a>
+                    <a href="/index.php?route=information/contact">Обратный звонок</a>
                   </div>
                 </div>
                 <?php if ($minimum > 1) { ?>
@@ -192,9 +188,9 @@
                       <div class="price-sales-product">
                         <?php if ($product['price']) { ?>
                           <?php if (!$product['special']) { ?>
-                          <p>Цена опт: <?php echo $product['price']; ?></p>
+                          <p>Цена: <?php echo $product['price']; ?></p>
                           <?php } else { ?>
-                          <p>Цена опт: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
+                          <p>Цена: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
                           <?php } ?>
                         <?php } ?>
                       </div>

@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="catalog/view/theme/tea/js/libs/mmenu/jquery.mmenu.all.css">
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="catalog/view/theme/tea/style/custom.css">
 <script src="catalog/view/theme/tea/js/libs/jquery/jquery.min.js"></script>
 <script src="catalog/view/theme/tea/js/libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="catalog/view/theme/tea/js/libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
@@ -98,7 +99,7 @@
         <div class="row header-desk">
           <div class="col-md-2 col-sm-3 col-xs-12 logo">
             <?php if ($logo) { ?>
-              <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" width="180" height="80" /></a>
+              <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" width="180" /></a>
             <?php } else { ?>
               <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
             <?php } ?>

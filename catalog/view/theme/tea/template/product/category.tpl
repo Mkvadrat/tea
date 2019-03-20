@@ -3,10 +3,10 @@
   <section class="category">
     <div class="container">
       <div class="row sidebar">
-        <div class="col-md-4 col-sm-5 col-xs-12 sidebar">
+        <div class="col-xs-12 sidebar sidebar__block">
           <?php echo $column_left; ?>
         </div>
-        <div class="col-md-8 col-sm-7 col-xs-12">
+        <div class="col-xs-12 catalog__block">
           <div class="nav-page">
             <ul id="content">
               <?php			
@@ -73,7 +73,7 @@
                 <div class="sales-item-product">
                   <div class="sales-info-product">
                     <div class="sales-img-product">
-                      <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="120" height="200"></a>
+                      <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" ></a>
                     </div>
                     <div class="sales-desc-product">
                       <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
@@ -85,9 +85,9 @@
                     <div class="price-sales-product">
                       <?php if ($product['price']) { ?>
                         <?php if (!$product['special']) { ?>
-                        <p>Цена опт: <?php echo $product['price']; ?></p>
+                        <p>Цена: <?php echo $product['price']; ?></p>
                         <?php } else { ?>
-                        <p>Цена опт: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
+                        <p>Цена: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
                         <?php } ?>
                       <?php } ?>
                     </div>
@@ -104,7 +104,7 @@
                 <div class="sales-item-list">
                   <div class="sales-info-list">
                     <div class="sales-img-list">
-                      <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['list_thumb']; ?>" alt="<?php echo $product['name']; ?>" width="200" height="320"></a>
+                      <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['list_thumb']; ?>" alt="<?php echo $product['name']; ?>" ></a>
                     </div>
                     <div class="sales-desc-list">
                       <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
@@ -116,9 +116,9 @@
                     <div class="price-sales-list">
                       <?php if ($product['price']) { ?>
                         <?php if (!$product['special']) { ?>
-                        <p>Цена опт: <?php echo $product['price']; ?></p>
+                        <p>Цена: <?php echo $product['price']; ?></p>
                         <?php } else { ?>
-                        <p>Цена опт: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
+                        <p>Цена: <?php echo $product['special']; ?> <sup><strike><?php echo $product['price']; ?></strike></sup></p>
                         <?php } ?>
                       <?php } ?>
                     </div>

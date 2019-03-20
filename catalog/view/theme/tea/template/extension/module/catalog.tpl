@@ -10,7 +10,7 @@
         <div class="product-item">
           <div class="photobox photobox_type">
             <div class="photobox__previewbox">
-              <img src="<?php echo $category['image']; ?>" class="photobox__preview" width="280" height="200" alt="<?php echo $category['name']; ?>">
+              <img src="<?php echo $category['image']; ?>" class="photobox__preview" width="280" height="auto" alt="<?php echo $category['name']; ?>">
               <span class="photobox__label"> <a href="<?php echo $category['href']; ?>">Подробнее</a></span>
             </div>
             <div class="title-pro">
