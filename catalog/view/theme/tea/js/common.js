@@ -172,6 +172,40 @@ function sendForm() {
     });
 }
 
+function sendCustomer() {
+    $.ajax({
+        url: 'index.php?route=extension/module/callback/sendCustomer',
+        type: 'post',
+        data: {
+            'name': $('#name_customer').val(),
+            'phone': $('#phone_customer').val(),
+            'email': $('#email_customer').val(),
+        },
+        dataType: 'json',
+        success: function (data) {
+									if(data.success){
+										$(".warning").html('');
+										
+										$(".reset_input").val('');
+
+										swal({
+														title: data.success,
+														text: "",
+														timer: 1000,
+														showConfirmButton: false
+										});
+
+										$.fancybox.close();
+									}
+									
+									if(data.error){
+										var error = data.error;
+										$(".warning").html('<div class="warning">' + error.join("") + '</div>');
+									}
+        }
+    });
+}
+
 // Cart add remove functions
 var cart = {
 	'add': function(product_id, quantity) {

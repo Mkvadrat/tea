@@ -527,6 +527,7 @@ class ControllerExtensionModulePHE extends Controller {
 		$data['text_affiliate'] = $this->language->get('text_affiliate');
 		$data['text_order'] = $this->language->get('text_order');
 		$data['text_callback'] = $this->language->get('text_callback');
+		$data['text_customer'] = $this->language->get('text_customer');
 		$data['text_contact'] = $this->language->get('text_contact');
 		$data['text_forgotten'] = $this->language->get('text_forgotten');
 		$data['text_reward'] = $this->language->get('text_reward');

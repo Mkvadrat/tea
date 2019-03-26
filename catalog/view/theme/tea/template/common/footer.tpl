@@ -1,4 +1,18 @@
-    <footer>
+    <script>
+      jQuery(document).ready(function( $ ) {
+        $("header .cooperation a").on('click', function(event){
+			event.preventDefault()
+			$('.overlay').addClass('open');
+		})
+      });
+	  $(document).mouseup(function (e) {
+			var container = $(".opt-form");
+			if (container.has(e.target).length === 0){
+				$('.overlay').removeClass('open');
+			}
+		});
+    </script>
+	<footer>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
@@ -102,6 +116,8 @@
         </div>
       </div>
     </footer>
+	
+	
 
     <!-- 14.02.19 -->
     <script src="catalog/view/theme/tea/js/libs/mmenu/jquery.mmenu.all.js" type="text/javascript"></script>
@@ -115,6 +131,10 @@
         });
       });
     </script>
-    <!-- 14.02.19 -->
+    <!-- 14.02.19 -->	
+    
+	
+	
+	
   </body>
 </html>

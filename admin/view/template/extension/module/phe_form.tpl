@@ -67,6 +67,11 @@
 					<?php } else { ?>
 					<option value="callback">Модуль "Обратная связь"</option>
 					<?php } ?>
+          <?php if ($type == 'cremail') { ?>
+					<option value="cremail" selected="selected">Отправка покупателю</option>
+					<?php } else { ?>
+					<option value="cremail">Отправка покупателю</option>
+					<?php } ?>
 					<?php if ($type == 'forgotten') { ?>
 					<option value="forgotten" selected="selected"><?php echo $text_forgotten; ?></option>
 					<?php } else { ?>

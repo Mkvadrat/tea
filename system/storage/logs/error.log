@@ -1,31 +1,69 @@
-2019-02-12 10:16:31 - PHP Notice:  Undefined variable: search in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 3
-2019-02-12 10:16:31 - PHP Notice:  Undefined variable: text_search in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\common\cart.tpl on line 3
-2019-02-12 10:42:50 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:44:06 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:44:38 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:44:38 - PHP Notice:  Undefined variable: categories in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 143
-2019-02-12 10:44:50 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:45:33 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:46:17 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:46:17 - PHP Notice:  Undefined variable: bottom_description in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 150
-2019-02-12 10:48:56 - PHP Notice:  Undefined index: bottom_description in D:\OpenServer\domains\tea.loc\admin\view\template\catalog\manufacturer_form.tpl on line 54
-2019-02-12 10:49:34 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 10:49:34 - PHP Notice:  Undefined variable: bottom_description in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 150
-2019-02-12 10:50:33 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\manufacturer_info.tpl on line 110
-2019-02-12 11:00:52 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 110
-2019-02-12 11:01:48 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 110
-2019-02-12 11:01:50 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 110
-2019-02-12 11:02:20 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:02:44 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:03:31 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:04:31 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:06:18 - PHP Notice:  Undefined variable: bottom_description in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 198
-2019-02-12 11:09:44 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:09:48 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:09:53 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:10:00 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:10:04 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:10:09 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:12:24 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:12:50 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
-2019-02-12 11:13:05 - PHP Notice:  Undefined index: list_thumb in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\product\search.tpl on line 156
+2019-03-07 13:32:03 - PHP Notice:  Undefined offset: 0 in /home/mkvadrat/tea/admin/model/design/custommenu.php on line 114
+2019-03-07 13:32:03 - PHP Notice:  Undefined offset: 31 in /home/mkvadrat/tea/admin/controller/design/custommenu.php on line 237
+2019-03-07 13:34:19 - PHP Notice:  Undefined index: custommenu_link in /home/mkvadrat/tea/admin/model/design/custommenu.php on line 133
+2019-03-07 13:34:48 - PHP Notice:  Undefined index: custommenu_link in /home/mkvadrat/tea/admin/model/design/custommenu.php on line 133
+2019-03-07 13:35:44 - PHP Notice:  Undefined index: custommenu_link in /home/mkvadrat/tea/admin/model/design/custommenu.php on line 133
+2019-03-07 13:38:09 - PHP Notice:  Undefined offset: 0 in /home/mkvadrat/tea/admin/model/design/custommenu.php on line 114
+2019-03-07 13:38:09 - PHP Notice:  Undefined offset: 37 in /home/mkvadrat/tea/admin/controller/design/custommenu.php on line 237
+2019-03-07 13:39:07 - PHP Notice:  Undefined offset: 0 in /home/mkvadrat/tea/admin/model/design/custommenu.php on line 114
+2019-03-07 13:39:07 - PHP Notice:  Undefined offset: 38 in /home/mkvadrat/tea/admin/controller/design/custommenu.php on line 237
+2019-03-07 13:41:07 - PHP Notice:  Undefined offset: 0 in /home/mkvadrat/tea/admin/model/design/custommenu_footer.php on line 114
+2019-03-07 13:41:07 - PHP Notice:  Undefined offset: 23 in /home/mkvadrat/tea/admin/controller/design/custommenu_footer.php on line 237
+2019-03-07 13:54:46 - PHP Notice:  Undefined offset: 0 in /home/mkvadrat/tea/admin/model/design/custommenu_footer.php on line 114
+2019-03-07 13:54:46 - PHP Notice:  Undefined offset: 27 in /home/mkvadrat/tea/admin/controller/design/custommenu_footer.php on line 237
+2019-03-14 15:16:31 - PHP Notice:  Undefined index: separator in /home/mkvadrat/tea/catalog/view/theme/tea/template/account/login.tpl on line 11
+2019-03-14 15:16:31 - PHP Notice:  Undefined index: separator in /home/mkvadrat/tea/catalog/view/theme/tea/template/account/login.tpl on line 11
+2019-03-14 15:19:58 - PHP Notice:  Undefined variable: category_info in /home/mkvadrat/tea/catalog/controller/account/login.php on line 116
+2019-03-14 15:19:58 - PHP Notice:  Undefined index: path in /home/mkvadrat/tea/catalog/controller/account/login.php on line 117
+2019-03-25 8:02:43 - PHP Warning:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Premature end of JPEG file
+ in /home/mkvadrat/tea/system/library/image.php on line 26
+2019-03-25 8:02:43 - PHP Warning:  imagecreatefromjpeg(): '/home/mkvadrat/tea/image/catalog/products-new/IMG_4980.JPG' is not a valid JPEG file in /home/mkvadrat/tea/system/library/image.php on line 26
+2019-03-25 8:02:43 - PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/mkvadrat/tea/system/library/image.php on line 118
+2019-03-25 8:02:43 - PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/mkvadrat/tea/system/library/image.php on line 119
+2019-03-25 8:12:37 - PHP Warning:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Premature end of JPEG file
+ in /home/mkvadrat/tea/system/library/image.php on line 26
+2019-03-25 8:12:37 - PHP Warning:  imagecreatefromjpeg(): '/home/mkvadrat/tea/image/catalog/products-new/IMG_4952.JPG' is not a valid JPEG file in /home/mkvadrat/tea/system/library/image.php on line 26
+2019-03-25 8:12:37 - PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/mkvadrat/tea/system/library/image.php on line 118
+2019-03-25 8:12:37 - PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/mkvadrat/tea/system/library/image.php on line 119
+2019-03-26 12:06:57 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 350
+2019-03-26 12:06:57 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 351
+2019-03-26 12:06:57 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 269
+2019-03-26 12:06:57 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 297
+2019-03-26 12:06:59 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 333
+2019-03-26 12:07:05 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 350
+2019-03-26 12:07:05 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 351
+2019-03-26 12:07:05 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 269
+2019-03-26 12:07:05 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 297
+2019-03-26 12:07:07 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 333
+2019-03-26 12:08:31 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 350
+2019-03-26 12:08:31 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 351
+2019-03-26 12:08:31 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 269
+2019-03-26 12:08:31 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 297
+2019-03-26 12:08:32 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 333
+2019-03-26 12:09:50 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 350
+2019-03-26 12:09:50 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 351
+2019-03-26 12:09:50 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 269
+2019-03-26 12:09:50 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 297
+2019-03-26 12:09:58 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 333
+2019-03-26 12:10:19 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 343
+2019-03-26 12:10:19 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 347
+2019-03-26 12:10:19 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 350
+2019-03-26 12:10:19 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHeader::$error has no effect in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 351
+2019-03-26 12:10:19 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 269
+2019-03-26 12:10:19 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 297
+2019-03-26 12:10:20 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 333
+2019-03-26 12:10:56 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 352
+2019-03-26 12:10:56 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 335
+2019-03-26 12:13:38 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:13:38 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
+2019-03-26 12:14:53 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:14:53 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
+2019-03-26 12:15:50 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:15:50 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
+2019-03-26 12:16:35 - PHP Notice:  Undefined index: message in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 271
+2019-03-26 12:16:35 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:16:48 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:17:39 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:17:39 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
+2019-03-26 12:20:53 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
+2019-03-26 12:20:53 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
