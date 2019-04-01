@@ -60,7 +60,7 @@
                   </div>
                   <div class="button-card">
                     <a id="button-cart">Добавить в корзину</a>
-                    <a href="/index.php?route=information/contact">Обратный звонок</a>
+                    <a class="opt-price" href="#">Оптовый прайс</a>
                   </div>
                 </div>
                 <?php if ($minimum > 1) { ?>

@@ -89,34 +89,34 @@ class ControllerExtensionModuleCallback extends Controller {
 		
 		$this->load->language('extension/module/callback');
 		
-		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+		/*if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
 			$json['error'][] = $this->language->get('error_name');
-		}
+		}*/
 		
 		if ((utf8_strlen($this->request->post['phone']) < 3) || (utf8_strlen($this->request->post['phone']) > 32)) {
 			$json['error'][] = $this->language->get('error_phone');
 		}
 		
-		if ((utf8_strlen($this->request->post['message']) < 10) || (utf8_strlen($this->request->post['message']) > 3000)) {
+		/*if ((utf8_strlen($this->request->post['message']) < 10) || (utf8_strlen($this->request->post['message']) > 3000)) {
 			$json['error'][] = $this->language->get('error_message');
-		}
+		}*/
 		
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
 	
 	protected function validate() {
-		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+		/*if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
 			$this->error['name'] = $this->language->get('error_name');
-		}
+		}*/
 
 		if ((utf8_strlen($this->request->post['phone']) < 3) || (utf8_strlen($this->request->post['phone']) > 32)) {
 			$this->error['phone'] = $this->language->get('error_phone');
 		}
 
-		if ((utf8_strlen($this->request->post['message']) < 10) || (utf8_strlen($this->request->post['message']) > 3000)) {
+		/*if ((utf8_strlen($this->request->post['message']) < 10) || (utf8_strlen($this->request->post['message']) > 3000)) {
 			$this->error['message'] = $this->language->get('error_message');
-		}
+		}*/
 
 		// Captcha
 		if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('contact', (array)$this->config->get('config_captcha_page'))) {
@@ -205,9 +205,9 @@ class ControllerExtensionModuleCallback extends Controller {
 		
 		$this->load->language('extension/module/callback');
 		
-		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+		/*if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
 			$json['error'][] = $this->language->get('error_name');
-		}
+		}*/
 		
 		if ((utf8_strlen($this->request->post['phone']) < 3) || (utf8_strlen($this->request->post['phone']) > 32)) {
 			$json['error'][] = $this->language->get('error_phone');
@@ -222,9 +222,9 @@ class ControllerExtensionModuleCallback extends Controller {
 	}
 	
 	protected function validateCustomer() {
-		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+		/*if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
 			$this->error['name'] = $this->language->get('error_name');
-		}
+		}*/
 
 		if ((utf8_strlen($this->request->post['phone']) < 3) || (utf8_strlen($this->request->post['phone']) > 32)) {
 			$this->error['phone'] = $this->language->get('error_phone');

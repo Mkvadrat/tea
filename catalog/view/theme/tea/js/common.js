@@ -200,7 +200,7 @@ function sendCustomer() {
 									
 									if(data.error){
 										var error = data.error;
-										$(".warning").html('<div class="warning">' + error.join("") + '</div>');
+										$(".warning-customer").html('<div class="warning">' + error.join("") + '</div>');
 									}
         }
     });
