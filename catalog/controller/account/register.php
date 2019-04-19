@@ -334,7 +334,7 @@ class ControllerAccountRegister extends Controller {
 				$data['text_agree'] = '';
 			}
 		} else {
-			$data['text_agree'] = '';
+			$data['text_agree'] = $this->language->get('text_agree_no_link');
 		}
 
 		if (isset($this->request->post['agree'])) {

@@ -67,3 +67,10 @@
 2019-03-26 12:17:39 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
 2019-03-26 12:20:53 - PHP Notice:  Undefined index: email in D:\OpenServer\domains\tea.loc\catalog\controller\common\header.php on line 303
 2019-03-26 12:20:53 - PHP Notice:  Undefined variable: message in D:\OpenServer\domains\tea.loc\catalog\view\theme\tea\template\mail\phe.tpl on line 25
+2019-03-26 11:56:57 - PHP Warning:  fsockopen(): unable to connect to ssl://smtp.yandex.ru:465 (Connection timed out) in /home/mkvadrat/tea/system/library/mail.php on line 167
+2019-03-26 11:57:06 - PHP Warning:  fsockopen(): unable to connect to ssl://smtp.yandex.ru:465 (Connection timed out) in /home/mkvadrat/tea/system/library/mail.php on line 167
+2019-04-18 16:09:47 - PHP Warning:  SessionHandler::write(): write failed: No space left on device (28) in /home/tea/public_html/system/library/session/native.php on line 21
+2019-04-18 16:11:50 - PHP Warning:  fread(): Length parameter must be greater than 0 in /home/tea/public_html/system/library/cache/file.php on line 32
+2019-04-18 16:11:50 - PHP Warning:  fread(): Length parameter must be greater than 0 in /home/tea/public_html/system/library/cache/file.php on line 32
+2019-04-18 16:11:50 - PHP Warning:  fread(): Length parameter must be greater than 0 in /home/tea/public_html/system/library/cache/file.php on line 32
+2019-04-18 16:11:50 - PHP Warning:  SessionHandler::write(): write failed: No space left on device (28) in /home/tea/public_html/system/library/session/native.php on line 21
