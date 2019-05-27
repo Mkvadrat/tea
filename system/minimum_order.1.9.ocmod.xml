@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Minimum order</name>
+	<code>minimum_order</code>
+	<version>1.9</version>
+	<author>mars1an</author>
+	<link>http://forum.opencart-russia.ru/members/mars1an.611/</link>
+  
+	<file path="admin/controller/setting/setting.php">
+		<operation>
+			<search><![CDATA[$data['entry_invoice_prefix'] = $this->language->get('entry_invoice_prefix');]]></search>
+			<add position="before"><![CDATA[$data['entry_order_min'] = $this->language->get('entry_order_min');]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$data['help_invoice_prefix'] = $this->language->get('help_invoice_prefix');]]></search>
+			<add position="before"><![CDATA[$data['help_order_min'] = $this->language->get('help_order_min');]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[if (isset($this->request->post['config_invoice_prefix'])) {]]></search>
+			<add position="before"><![CDATA[
+				if (isset($this->request->post['config_order_min'])) {
+				  $data['config_order_min'] = $this->request->post['config_order_min'];
+				} elseif ($this->config->has('config_order_min')) {
+				  $data['config_order_min'] = $this->config->get('config_order_min');
+				} else {
+				  $data['config_order_min'] = '';
+				}
+			]]></add>
+		</operation>
+	</file> 
+	<file path="admin/language/ru*/setting/setting.php">
+		<operation>
+			<search><![CDATA[$_['entry_invoice_prefix']]]></search>
+			<add position="before"><![CDATA[$_['entry_order_min']              = 'Минимальная сумма заказа';]]></add>
+		</operation>	
+		<operation>
+			<search><![CDATA[$_['help_invoice_prefix']]]></search>
+			<add position="before"><![CDATA[$_['help_order_min']  = 'Минимальная сумма заказа в магазине.';]]></add>
+		</operation>
+	</file>
+	<file path="admin/language/en*/setting/setting.php">
+		<operation>
+			<search><![CDATA[$_['entry_invoice_prefix']]]></search>
+			<add position="before"><![CDATA[$_['entry_order_min']              = 'Minimum order';]]></add>
+		</operation>	
+		<operation>
+			<search><![CDATA[$_['help_invoice_prefix']]]></search>
+			<add position="before"><![CDATA[$_['help_order_min']  = 'Minimum order.';]]></add>
+		</operation>
+	</file>
+	<file path="catalog/language/ru*/{russian,ru-ru}.php">
+		<operation>
+			<search><![CDATA[$_['text_home']]]></search>
+			<add position="before"><![CDATA[$_['text_order_min']              = 'Минимальная сумма заказа %s';]]></add>
+		</operation>	
+	</file>
+	<file path="catalog/language/en*/{english,en-gb}.php">
+		<operation>
+			<search><![CDATA[$_['text_home']]]></search>
+			<add position="before"><![CDATA[$_['text_order_min']              = 'Minimum order %s';]]></add>
+		</operation>	
+	</file>
+	<file path="admin/view/template/setting/setting.tpl">
+		<operation>
+			<search><![CDATA[<legend><?php echo $text_checkout; ?></legend>]]></search>
+			<add position="after"><![CDATA[
+				<div class="form-group">
+				  <label class="col-sm-2 control-label" for="input-order-min"><span data-toggle="tooltip" title="<?php echo $help_order_min; ?>"><?php echo $entry_order_min; ?></span></label>
+				  <div class="col-sm-10">
+					<input type="text" name="config_order_min" value="<?php echo $config_order_min; ?>" placeholder="<?php echo $entry_order_min; ?>" id="input-order-min" class="form-control" />
+				  </div>
+				</div>
+			]]></add>
+		</operation>
+	</file>	
+	<file path="catalog/controller/checkout/cart.php">
+		<operation>
+			<search><![CDATA[unset($this->session->data['error']);]]></search>
+			<add position="after"><![CDATA[
+				} elseif ($this->cart->hasProducts() && ($this->cart->getTotal() < $this->config->get('config_order_min'))) {
+					$data['error_warning'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+					$data['error'] = true;
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/controller/checkout/{checkout,confirm,shipping_method,oct_fastorder}.php">
+		<operation>
+			<search><![CDATA[if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {]]></search>
+			<add position="replace"><![CDATA[if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout')) || (($this->cart->getTotal() < $this->config->get('config_order_min')) && $this->cart->hasProducts() )) {]]></add>
+		</operation>
+	</file>
+	<file path="catalog/view/theme/default/template/checkout/cart.tpl">
+		<operation>
+			<search><![CDATA[<div class="pull-right"><a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout; ?></a></div>]]></search>
+			<add position="replace"><![CDATA[<div class="pull-right"><a href="<?php echo $checkout; ?>" class="<?php echo (!isset($error)) ? 'btn btn-primary' : 'btn btn-primary disabled' ; ?>"><?php echo $button_checkout; ?></a></div>]]></add>
+		</operation>
+	</file>
+
+	<!-- ADD FastOrder compatibility -->
+	<file path="catalog/controller/checkout/fastorder/fastorder.php">
+		<operation>
+			<search index="1"><![CDATA[unset($this->session->data['error']);]]></search>
+			<add position="after"><![CDATA[
+				} elseif ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$data['error_warning_cart'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+					$data['error'] = true;
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/view/theme/*/template/checkout/fastorder/fastorder.tpl">
+		<operation>
+			<search><![CDATA[<input type="button" value="<?php echo $button_checkout; ?>" id="checkout-order" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />]]></search>
+			<add position="replace"><![CDATA[<input type="button" value="<?php echo $button_checkout; ?>" id="checkout-order" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" <?php echo (!isset($error)) ? '' : ' disabled ' ; ?> />]]></add>
+		</operation>
+	</file>
+	<!-- END FastOrder compatibility -->
+
+	<!-- ADD UniCheckout compatibility -->
+	<file path="catalog/controller/checkout/unicheckout.php">
+		<operation>
+			<search index="0,6,7"><![CDATA[if ($product['minimum'] > $product_total) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$data['error_warning'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+					$data['error_order_min'] = true;
+				}
+			]]></add>
+		</operation>
+		<operation>
+			<search index="1,2,3,4,5,8"><![CDATA[if ($product['minimum'] > $product_total) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$json['redirect'] = $this->url->link('checkout/cart');
+
+					break;
+				}
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/controller/checkout/uni_checkout.php">
+		<operation>
+			<search><![CDATA[if (!$this->cart->getProducts() || !$this->cart->hasStock() && (!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning'))) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$json['error']['error_warning'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+					$data['error_order_min'] = true;
+				}
+			]]></add>
+		</operation>
+		<operation>
+			<search index="0"><![CDATA[foreach ($products as $product) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$data['error_warning'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+					$data['error_order_min'] = true;
+				}
+			]]></add>
+		</operation>
+		<operation>
+			<search index="1"><![CDATA[foreach ($products as $product) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$redirect = $this->url->link('checkout/cart');
+					break;
+				}
+			]]></add>
+		</operation>
+	</file>
+	<!-- END UniCheckout compatibility -->
+
+	<!-- ADD NewStore fastorder compatibility -->
+	<file path="catalog/controller/checkout/newstorecheckout.php">
+		<operation>
+			<search><![CDATA[if ($product['minimum'] > $product_total) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$data['error_order_warning'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+					$data['error_order_min'] = true;
+				}
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/view/theme/newstore/template/checkout/newstorecheckout.tpl">
+		<operation>
+			<search><![CDATA[$('.all_total_checkout_footer h3 span.total_html').html($('.table_total td:last').html())]]></search>
+			<add position="after"><![CDATA[
+	<?php if (isset($error_order_min) && $error_order_min =='true') { ?>
+    	$('#button-register').replaceWith('<input type="button" class="btn btn-primary" data-loading-text="<?php if (isset($error_order_warning)) echo $error_order_warning;else echo 'loading ...' ?>" id="button-register" value="<?php echo $error_order_warning;?>" disabled>');
+    <?php } else { ?>
+    	$('#button-register').replaceWith('<input type="button" class="btn btn-primary" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" id="button-register" value="<?php echo $heading_title;?>">');
+    <?php } ?>
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/module/{newfastorder*}.php">
+		<operation>
+			<search><![CDATA[$data['img_fastorder']]]></search>
+			<add position="before"><![CDATA[
+			$data['config_order_min'] = $this->config->get('config_order_min');
+			$data['text_order_min'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/view/theme/newstore/template/module/{newfastorder*}.tpl">
+		<operation>
+			<search><![CDATA[animateMainPrice_quickorder(main_price);]]></search>
+			<add position="after"><![CDATA[
+    if (<?php echo $config_order_min; ?> > main_price) {
+    	$('.btn-quickorder-one').replaceWith('<button type="button" class="btn btn-quickorder-one disabled"><i class="<?php echo $icon_send_fastorder;?> fa-fw"></i> <?php echo $text_order_min; ?></button>');
+    } else {
+    	$('.btn-quickorder-one').replaceWith('<button type="button" onclick="quickorder_confirm();" class="btn btn-quickorder-one"><i class="<?php echo $icon_send_fastorder;?> fa-fw"></i> <?php echo $button_send; ?></button>');
+    }
+			]]></add>
+		</operation>
+	</file>
+	<!-- END NewStore fastorder compatibility -->
+
+	<!-- ADD storeset fastorder compatibility -->
+	<file path="catalog/controller/checkout/oct_fastorder.php">
+		<operation>
+			<search><![CDATA[unset($this->session->data['error']);]]></search>
+			<add position="after"><![CDATA[
+				} elseif ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$data['error_warning_min'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[if ($product['minimum'] > $product_total) {]]></search>
+			<add position="before"><![CDATA[
+				if ($this->cart->getTotal() < $this->config->get('config_order_min')) {
+					$data['error_warning_min'] = sprintf($this->language->get('text_order_min'), $this->currency->format($this->config->get('config_order_min'), $this->session->data['currency']));
+				}
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/view/theme/storeset/template/checkout/oct_fastorder/fastorder.tpl">
+<!--
+		<operation>
+			<search><![CDATA[<input type="button" class="btn btn-primary" id="button-go" value="<?php echo $button_checkout;?>" />]]></search>
+			<add position="replace"><![CDATA[<input type="button" class="btn btn-primary" id="button-go" value="<?php echo $button_checkout;?>" <?php echo (!isset($error_warning_min)) ? '' : ' disabled ' ; ?> />]]></add>
+		</operation>
+-->
+		<operation>
+			<search><![CDATA[<div class="table-responsive">]]></search>
+			<add position="before"><![CDATA[
+                <?php if (isset($error_warning_min)) { ?>
+                <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning_min; ?>
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+                <?php } ?>
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[<div class="top-menu">]]></search>
+			<add position="before"><![CDATA[
+                <?php if (isset($error_warning_min)) { ?>
+                <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning_min; ?>
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+                <?php } ?>
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/view/theme/storeset/template/checkout/cart.tpl">
+		<operation>
+			<search><![CDATA[<div class="pull-right"><a href="<?php echo $checkout; ?>" class="button"><?php echo $button_checkout; ?></a></div>]]></search>
+			<add position="replace"><![CDATA[<div class="pull-right <?php echo (!isset($error)) ? '' : 'hide' ; ?>"><a href="<?php echo $checkout; ?>" class="button"><?php echo $button_checkout; ?></a></div>]]></add>
+		</operation>
+	</file>
+	<!-- END storeset fastorder compatibility -->
+
+</modification>

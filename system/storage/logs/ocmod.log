@@ -2055,7 +2055,7 @@ FILE: catalog/controller/extension/total/voucher.php
 CODE: $mail->send();
 LINE: 200
 ----------------------------------------------------------------
-2019-04-12 14:19:27 - MOD: Modification Default
+2019-04-30 9:42:14 - MOD: Modification Default
 
 FILE: system/engine/action.php
 REGEX: ~(require|include)(_once)?\(([^)]+)~
@@ -2175,4 +2175,179 @@ LINE: 318
 FILE: catalog/controller/extension/total/voucher.php
 CODE: $mail->send();
 LINE: 200
+----------------------------------------------------------------
+2019-05-27 15:10:49 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Imagemanager
+
+FILE: admin/view/template/common/header.tpl
+CODE: view/javascript/bootstrap/js/bootstrap.min.js
+LINE: 31
+CODE: view/javascript/common.js
+LINE: 45
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: function addImage() {
+LINE: 1419
+CODE: <td class="text-left"><?php echo $entry_image; ?></td>
+LINE: 861
+CODE: <td class="text-left"><?php echo $entry_additional_image; ?></td>
+LINE: 879
+CODE: <tbody>
+LINE: 884
+CODE: <tr id="image-row<?php echo $image_row; ?>">
+LINE: 892
+CODE: html  = '<tr id="image-row' + image_row + '">';
+LINE: 1434
+CODE: <?php echo $footer; ?>
+LINE: 1517
+
+FILE: admin/view/template/design/banner_form.tpl
+CODE: function addImage(language_id) {
+LINE: 120
+----------------------------------------------------------------
+MOD: Шаблоны писем
+
+FILE: catalog/model/account/customer.php
+CODE: $mail->send();
+LINE: 140
+
+FILE: catalog/model/affiliate/affiliate.php
+CODE: $mail->send();
+LINE: 124
+CODE: $mail->send();
+LINE: 316
+
+FILE: catalog/controller/information/contact.php
+CODE: $mail->send();
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/controller/account/forgotten.php
+CODE: $mail->send();
+LINE: 129
+
+FILE: catalog/language/en-gb/mail/order.php
+CODE: $_
+LINE: 5
+
+FILE: catalog/language/ru-ru/mail/order.php
+CODE: $_
+LINE: 5
+
+FILE: catalog/model/checkout/order.php
+CODE: $mail->send();
+LINE: 1073
+CODE: $mail->send();
+LINE: 1326
+
+FILE: admin/model/customer/customer.php
+CODE: $mail->setSubject(sprintf($this->language->get('text_reward_subject'), html_entity_decode($store_name, ENT_QUOTES, 'UTF-8')));
+LINE: 636
+CODE: $mail->setSubject(sprintf($this->language->get('text_approve_subject'), html_entity_decode($store_name, ENT_QUOTES, 'UTF-8')));
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/model/marketing/affiliate.php
+CODE: $mail->setSubject(sprintf($this->language->get('text_approve_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')));
+LINE: 179
+CODE: $mail->setSubject(sprintf($this->language->get('text_transaction_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')));
+LINE: 352
+
+FILE: admin/model/sale/return.php
+CODE: $mail->send();
+LINE: 317
+
+FILE: admin/model/sale/voucher.php
+CODE: $mail->send();
+LINE: 226
+LINE: 318
+
+FILE: catalog/controller/extension/total/voucher.php
+CODE: $mail->send();
+LINE: 200
+----------------------------------------------------------------
+MOD: Minimum order
+
+FILE: admin/controller/setting/setting.php
+CODE: $data['entry_invoice_prefix'] = $this->language->get('entry_invoice_prefix');
+LINE: 123
+CODE: $data['help_invoice_prefix'] = $this->language->get('help_invoice_prefix');
+LINE: 228
+CODE: if (isset($this->request->post['config_invoice_prefix'])) {
+LINE: 891
+
+FILE: admin/language/ru-ru/setting/setting.php
+CODE: $_['entry_invoice_prefix']
+LINE: 92
+CODE: $_['help_invoice_prefix']
+LINE: 210
+
+FILE: admin/language/en-gb/setting/setting.php
+CODE: $_['entry_invoice_prefix']
+LINE: 82
+CODE: $_['help_invoice_prefix']
+LINE: 156
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: $_['text_home']
+LINE: 13
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: $_['text_home']
+LINE: 13
+
+FILE: admin/view/template/setting/setting.tpl
+CODE: <legend><?php echo $text_checkout; ?></legend>
+LINE: 812
+
+FILE: catalog/controller/checkout/cart.php
+CODE: unset($this->session->data['error']);
+LINE: 48
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+LINE: 4
+
+FILE: catalog/controller/checkout/confirm.php
+CODE: if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+LINE: 32
+
+FILE: catalog/controller/checkout/shipping_method.php
+CODE: if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+LINE: 90
+
+FILE: catalog/view/theme/default/template/checkout/cart.tpl
+CODE: <div class="pull-right"><a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout; ?></a></div>
+LINE: 126
 ----------------------------------------------------------------
